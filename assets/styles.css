@@ -1,5 +1,3 @@
-body { background: red !important; }
-
 /* Reset / base */
 * {
   margin: 0;
@@ -11,27 +9,6 @@ body { background: red !important; }
 body {
   background: radial-gradient(circle at top left, #e0f2fe 0, #f5f5f7 40%, #fdf2ff 100%);
   color: #1d1d1f;
-}
-
-/* Custom cursor */
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #111827;
-  pointer-events: none;
-  transform: translate(-100px, -100px);
-  transition: transform 0.08s linear, background 0.15s ease, width 0.15s ease, height 0.15s ease;
-  z-index: 100;
-}
-
-.cursor-dot--active {
-  background: #6366f1;
-  width: 18px;
-  height: 18px;
 }
 
 /* Navbar */
@@ -230,7 +207,7 @@ main {
   border: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
   transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-  cursor: pointer;
+  cursor: default;
 }
 
 .card h3 {
@@ -294,6 +271,97 @@ main {
   margin-bottom: 10px;
 }
 
+/* Phones page extras (we’ll use these later) */
+.phones-hero {
+  padding: 40px 24px 24px;
+}
+
+.phones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.phone-card {
+  background: rgba(255,255,255,0.96);
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.phone-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.phone-card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.phone-meta {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.phone-status {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.phone-status.success {
+  color: #16a34a;
+}
+
+.phone-status.fail {
+  color: #dc2626;
+}
+
+.phone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+  border-color: #22c55e;
+}
+
+/* Phone detail */
+.phone-detail {
+  padding: 40px 24px 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.phone-detail h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.phone-detail p {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.phone-detail .status {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.phone-detail .status.success {
+  color: #16a34a;
+}
+
+.phone-detail .status.fail {
+  color: #dc2626;
+}
+
+.back-link {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
 /* Footer */
 .footer {
   text-align: center;
@@ -303,4 +371,3 @@ main {
   margin-top: 32px;
   border-top: 1px solid rgba(148, 163, 184, 0.35);
 }
-
