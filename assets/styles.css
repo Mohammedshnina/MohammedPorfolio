@@ -271,7 +271,7 @@ main {
   margin-bottom: 10px;
 }
 
-/* Phones page extras (we’ll use these later) */
+/* Phones page */
 .phones-hero {
   padding: 40px 24px 24px;
 }
@@ -326,7 +326,7 @@ main {
   border-color: #22c55e;
 }
 
-/* Phone detail */
+/* Phone detail page */
 .phone-detail {
   padding: 40px 24px 32px;
   max-width: 720px;
@@ -344,16 +344,16 @@ main {
   margin-bottom: 8px;
 }
 
-.phone-detail .status {
+.status {
   font-weight: 600;
   margin-bottom: 12px;
 }
 
-.phone-detail .status.success {
+.status.success {
   color: #16a34a;
 }
 
-.phone-detail .status.fail {
+.status.fail {
   color: #dc2626;
 }
 
