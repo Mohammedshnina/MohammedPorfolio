@@ -2,37 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Galaxy S10 Repair | Mohammed</title>
+  <title>Galaxy S10 Repair & Specs | Mohammed</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">Mohammed</div>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../phones.html">Phones</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
 
-<main class="phone-detail">
-  <h1>Galaxy S10 – Diagnostics Attempt</h1>
-  <p class="status fail">Status: Learning / Not Fixed</p>
-  <img src="images/my-fix.jpg" alt="Phone repair photo" class="phone-img">
+  <main class="phone-detail">
+    <h1>Samsung Galaxy S10</h1>
 
+    <!-- Change success/fail/learning here -->
+    <p class="status success">Repair Status: Success</p>
 
-  <p>Investigated random shutdown issues. Opened the device, checked connectors, and cleaned the board.</p>
-  <p> Learned more about Samsung internals and board layout.</p>
+    <!-- Your repair photo -->
+    <!-- Make sure the file is at: phones/images/my-fix.jpg -->
+    <img src="images/my-fix.jpg" alt="Galaxy S10 repair photo" class="phone-img">
 
-  <p class="back-link"><a href="../phones.html">← Back to all phones</a></p>
-</main>
+    <!-- BASIC SPECS SECTION -->
+    <section>
+      <h2>📦 Device Specifications</h2>
+      <p>
+        The Samsung Galaxy S10 is a flagship phone announced in 2019. It has a curved
+        AMOLED display, multiple rear cameras and a fingerprint sensor under the screen.
+      </p>
+      <ul>
+        <li><strong>Display:</strong> 6.1″ Dynamic AMOLED, 1440×3040 (Infinity‑O)</li>
+        <li><strong>Chipset:</strong> Exynos 9820 / Snapdragon 855 (region dependent)</li>
+        <li><strong>RAM & Storage:</strong> typically 8 GB RAM, 128 GB+ storage, microSD support</li>
+        <li><strong>Battery:</strong> ~3400 mAh, fast & wireless charging</li>
+        <li><strong>Cameras:</strong> Triple rear camera (wide, ultra‑wide, telephoto)</li>
+        <li><strong>OS at launch:</strong> Android 9 (One UI), upgradable in later updates</li>
+      </ul>
+    </section>
 
-<footer class="footer">© <span id="year"></span> Mohammed</footer>
+    <!-- INTERNAL COMPONENTS SECTION -->
+    <section>
+      <h2>🧠 Inside the Galaxy S10</h2>
+      <p>
+        Inside the Galaxy S10 there are several main parts that matter for repair work:
+      </p>
+      <ul>
+        <li>
+          <strong>Main board:</strong> holds the processor, storage, RAM and power management chips.
+        </li>
+        <li>
+          <strong>Battery:</strong> a Li‑Ion cell glued to the frame with adhesive strips.
+        </li>
+        <li>
+          <strong>Display assembly:</strong> screen, touch layer and front glass bonded together.
+        </li>
+        <li>
+          <strong>Charging board:</strong> USB‑C port, some sensors and microphones.
+        </li>
+        <li>
+          <strong>Cameras:</strong> separate modules connected by flex cables to the main board.
+        </li>
+      </ul>
+      <p>
+        Most repairs involve carefully heating and lifting the back glass, disconnecting
+        the battery and then swapping parts like the screen, charging port or battery.
+      </p>
+    </section>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <!-- WHAT YOU DID / REPAIR NOTES -->
+    <section>
+      <h2>🔧 Repair Notes</h2>
+      <p>
+        Here you can write what you actually did on this phone. For example:
+      </p>
+      <ul>
+        <li>Opened the phone by heating the back glass and separating the adhesive.</li>
+        <li>Disconnected the battery before touching other components.</li>
+        <li>Inspected connectors and cleaned dust or corrosion where needed.</li>
+        <li>Re‑assembled and tested boot, charging and basic functions.</li>
+      </ul>
+      <p>
+        Edit this section with your real notes about this specific Galaxy S10.
+      </p>
+    </section>
+
+    <!-- SOURCES SECTION -->
+    <section>
+      <h2>🔗 Sources & References</h2>
+      <p>
+        These links give full technical details and breakdowns of the Galaxy S10:
+      </p>
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S10" target="_blank">
+            Samsung Galaxy S10 — Wikipedia
+          </a>
+        </li>
+        <li>
+          <a href="https://www.samsung.com/global/galaxy/galaxy-s10/" target="_blank">
+            Official Samsung Galaxy S10 page
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+S10+Teardown/120964" target="_blank">
+            Galaxy S10 Teardown — iFixit
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="back-link">
+      <a href="../phones.html">← Back to all phones</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
-
