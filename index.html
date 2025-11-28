@@ -7,16 +7,14 @@
 </head>
 <body>
 
-  <!-- custom cursor -->
-  <div class="cursor-dot"></div>
-
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="phones.html">Phones</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
@@ -36,7 +34,7 @@
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn primary">View projects</a>
-            <a href="#contact" class="btn ghost">Contact me</a>
+            <a href="phones.html" class="btn ghost">Phones I fix</a>
           </div>
         </div>
         <div class="hero-card">
@@ -63,8 +61,8 @@
         <article class="card">
           <h3>Phone Repair Practice</h3>
           <p>
-            Experience doing screen replacements, battery swaps and basic diagnostics
-            on phones. Focused on careful work and not breaking anything.
+            Screen replacements, battery swaps and basic diagnostics on phones.
+            Focused on careful work and not breaking anything.
           </p>
           <div class="card-tags">
             <span class="tag">Hardware</span>
@@ -166,28 +164,7 @@
   </footer>
 
   <script>
-    // year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // simple custom cursor
-    const dot = document.querySelector(".cursor-dot");
-    const hoverTargets = document.querySelectorAll("a, .btn, .card");
-    let dotX = 0, dotY = 0;
-
-    window.addEventListener("mousemove", (e) => {
-      dotX = e.clientX;
-      dotY = e.clientY;
-      dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
-    });
-
-    hoverTargets.forEach(el => {
-      el.addEventListener("mouseenter", () => {
-        dot.classList.add("cursor-dot--active");
-      });
-      el.addEventListener("mouseleave", () => {
-        dot.classList.remove("cursor-dot--active");
-      });
-    });
   </script>
 
 </body>
