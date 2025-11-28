@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Phones I fix | Mohammed</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="phones.html">Phones</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="phones-hero">
+      <h1 class="section-title">Phones I've worked on</h1>
+      <p class="section-subtitle">Click a phone to see details.</p>
+    </section>
+
+    <section class="section">
+      <div class="phones-grid">
+
+        <div class="phone-card">
+          <a href="phones/iphone-11.html">
+            <h3>iPhone 11</h3>
+            <p class="phone-meta">Screen replacement</p>
+            <p class="phone-status success">Status: Success</p>
+          </a>
+        </div>
+
+        <div class="phone-card">
+          <a href="phones/iphone-xr.html">
+            <h3>iPhone XR</h3>
+            <p class="phone-meta">Battery swap</p>
+            <p class="phone-status success">Status: Success</p>
+          </a>
+        </div>
+
+        <div class="phone-card">
+          <a href="phones/galaxy-s10.html">
+            <h3>Galaxy S10</h3>
+            <p class="phone-meta">Diagnostics</p>
+            <p class="phone-status fail">Status: Fail</p>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
