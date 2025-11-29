@@ -427,28 +427,7 @@ nav a:hover::after {
 }
 
 /* Timeline -------------------------------------------------------------- */
-.timeline {
-  position: relative;
-  padding-left: 18px;
-  border-left: 2px solid rgba(148, 163, 184, 0.6);
-  display: grid;
-  gap: 18px;
-}
 
-.timeline-item {
-  position: relative;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -9px;
-  top: 4px;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 6px rgba(99, 102, 241, 0.7);
-}
 .timeline {
   padding-left: 18px;
   border-left: 2px solid rgba(148, 163, 184, 0.6);
