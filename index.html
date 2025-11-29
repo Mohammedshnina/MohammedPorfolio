@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <title>Mohammed | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Stop the browser trying to restore your old scroll position
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
 </head>
 <body>
 
@@ -17,7 +23,6 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Theme toggle -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
       <span class="theme-toggle-icon">🌞</span>
@@ -33,7 +38,7 @@
           <p class="hero-eyebrow">Student · Web · Phone repair</p>
 
           <h1 class="hero-title">
-            Hi, I’m Mohammed.<br>
+            Hi, I’m Mohammed.<br />
             I fix phones and build games.
           </h1>
 
@@ -266,25 +271,16 @@
     © <span id="year"></span> Mohammed
   </footer>
 
-    <script>
-    // 🔹 Stop browser from restoring old scroll position
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-
-    // 🔹 Always start at the top when loading the site (unless there's a #hash)
+  <script>
+    // Always start at the very top
     window.addEventListener("load", () => {
-      if (!window.location.hash) {
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-        }, 10);
-      }
+      window.scrollTo(0, 0);
     });
 
-    // Year in footer
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // THEME TOGGLE
+    // Theme toggle
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
@@ -314,7 +310,7 @@
       });
     }
 
-    // SCROLL REVEAL ANIMATION
+    // Scroll reveal
     const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       entries => {
@@ -330,9 +326,5 @@
 
     revealEls.forEach(el => observer.observe(el));
   </script>
-</body>
-</html>
-
-
 </body>
 </html>
