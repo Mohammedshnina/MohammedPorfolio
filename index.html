@@ -217,40 +217,48 @@
     © <span id="year"></span> Mohammed
   </footer>
 
+    <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
   <script>
-  // Year in footer
-  document.getElementById("year").textContent = new Date().getFullYear();
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // THEME TOGGLE (gaming‑style dark mode)
-  const root = document.documentElement;
-  const toggle = document.getElementById("themeToggle");
+    // THEME TOGGLE (gaming dark mode)
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
 
-  if (toggle) {
-    const icon = toggle.querySelector(".theme-toggle-icon");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
 
-    const setTheme = (theme) => {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      icon.textContent = theme === "dark" ? "🎮" : "🌞";
-    };
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
 
-    // Load saved theme or system preference
-    const saved = localStorage.getItem("theme");
-    if (saved) {
-      setTheme(saved);
-    } else {
-      const prefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
+      // Load saved theme or system preference
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+
+      // Click = toggle
+      toggle.addEventListener("click", () => {
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
     }
+  </script>
+</body>
+</html>
 
-    toggle.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
-      setTheme(current === "dark" ? "light" : "dark");
-    });
-  }
-</script>
 
 
 </body>
