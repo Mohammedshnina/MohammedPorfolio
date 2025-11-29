@@ -266,11 +266,18 @@
     © <span id="year"></span> Mohammed
   </footer>
 
-  <script>
-    // Always start at top when there is no #hash
+    <script>
+    // 🔹 Stop browser from restoring old scroll position
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // 🔹 Always start at the top when loading the site (unless there's a #hash)
     window.addEventListener("load", () => {
       if (!window.location.hash) {
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 10);
       }
     });
 
@@ -323,6 +330,9 @@
 
     revealEls.forEach(el => observer.observe(el));
   </script>
+</body>
+</html>
+
 
 </body>
 </html>
