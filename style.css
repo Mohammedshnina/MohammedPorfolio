@@ -208,13 +208,13 @@ nav a:hover::after {
   gap: 12px;
 }
 
-/* Badge row under hero */
 .badge-row {
   margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
+
 
 .badge {
   font-size: 11px;
