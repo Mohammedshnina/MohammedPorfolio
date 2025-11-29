@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Galaxy S10 Repair & Specs | Mohammed</title>
+  <title>Samsung Galaxy S10 | Repair & Specs – Mohammed</title>
+  <!-- CSS file lives in /assets/styles.css -->
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
 
+  <!-- Top navbar -->
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -15,19 +17,20 @@
     </nav>
   </header>
 
+  <!-- Main phone content -->
   <main class="phone-detail">
     <h1>Samsung Galaxy S10</h1>
     <p class="status success">Repair Status: Success</p>
 
-    <!-- Optional image -->
-    <!-- <img src="../images/galaxy-s10.jpg" alt="Galaxy S10 repair" class="phone-img"> -->
+    <!-- Repair image (make sure you actually have /images/image.jpg in the repo) -->
+    <img src="../images/image.jpg" alt="Samsung Galaxy S10 repair" class="phone-img" />
 
     <section>
       <h2>📦 Device Specifications</h2>
       <ul>
         <li><strong>Display:</strong> 6.1″ Dynamic AMOLED, 1440×3040 (Infinity‑O)</li>
-        <li><strong>Chipset:</strong> Exynos 9820 / Snapdragon 855 (region)</li>
-        <li><strong>RAM & Storage:</strong> 8 GB RAM, 128 GB+ storage, microSD</li>
+        <li><strong>Chipset:</strong> Exynos 9820 / Snapdragon 855 (region dependent)</li>
+        <li><strong>RAM & Storage:</strong> 8 GB RAM, 128 GB+ storage, microSD support</li>
         <li><strong>Battery:</strong> ~3400 mAh, fast & wireless charging</li>
         <li><strong>Cameras:</strong> Triple rear camera (wide, ultra‑wide, telephoto)</li>
         <li><strong>Release year:</strong> 2019</li>
@@ -37,36 +40,52 @@
     <section>
       <h2>🧠 Inside the Galaxy S10</h2>
       <p>
-        The S10 has a main logic board, daughterboard for the USB‑C port,
-        a glued‑in battery, separate camera modules and lots of flex cables.
+        The Galaxy S10 has a main logic board, a daughterboard for the USB‑C port,
+        a glued‑in battery, separate rear and front camera modules, and multiple
+        flex cables that connect everything together.
+      </p>
+      <p>
+        Opening the phone normally starts by heating and lifting the back glass,
+        then disconnecting the battery before working on any other components.
       </p>
     </section>
 
     <section>
       <h2>🔧 Repair Notes</h2>
-      <p>Example notes (replace with your real work):</p>
+      <p>Replace this list with what you actually did on this phone:</p>
       <ul>
         <li>Heated and removed the back glass to access the internals.</li>
-        <li>Disconnected the battery before removing other parts.</li>
-        <li>Checked and cleaned connectors and replaced the faulty part.</li>
-        <li>Re‑assembled and tested boot, charging and camera.</li>
+        <li>Disconnected the battery before removing or swapping parts.</li>
+        <li>Checked and cleaned connectors, then replaced the faulty part.</li>
+        <li>Re‑assembled and tested boot, charging and cameras.</li>
       </ul>
     </section>
 
     <section>
       <h2>🔗 Sources & References</h2>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S10" target="_blank">Samsung Galaxy S10 — Wikipedia</a></li>
-        <li><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+S10+Teardown/120964" target="_blank">Galaxy S10 Teardown — iFixit</a></li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S10" target="_blank">
+            Samsung Galaxy S10 — Wikipedia
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+S10+Teardown/120964" target="_blank">
+            Galaxy S10 Teardown — iFixit
+          </a>
+        </li>
       </ul>
     </section>
 
-    <p class="back-link"><a href="../phones.html">← Back to all phones</a></p>
+    <p class="back-link">
+      <a href="../phones.html">← Back to all phones</a>
+    </p>
   </main>
 
   <footer class="footer">
     © <span id="year"></span> Mohammed
   </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
