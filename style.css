@@ -281,12 +281,11 @@ nav a:hover::after {
     color var(--transition-fast),
     transform 0.12s ease,
     box-shadow var(--transition-fast);
-  outline: none;              /* remove blue browser outline */
+  outline: none; /* kill default blue outline */
 }
 
-/* optional: custom focus so keyboard users still see something */
 .btn:focus-visible {
-  box-shadow: 0 0 0 2px var(--accent);
+  box-shadow: 0 0 0 2px var(--accent); /* clean custom focus */
 }
 
 .btn.primary {
