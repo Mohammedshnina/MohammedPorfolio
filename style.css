@@ -23,7 +23,7 @@
   --transition-med: 0.25s ease;
 }
 
-/* Gaming-style dark mode */
+/* Gaming dark mode */
 [data-theme="dark"] {
   --bg-start: #020617;
   --bg-mid: #020617;
@@ -61,6 +61,15 @@ body {
 main {
   max-width: 1040px;
   margin: 0 auto;
+}
+
+/* Kill default blue outlines everywhere */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 /* NAVBAR ----------------------------------------------------------------- */
@@ -116,7 +125,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* THEME TOGGLE BUTTON ---------------------------------------------------- */
+/* THEME TOGGLE ----------------------------------------------------------- */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -180,7 +189,7 @@ nav a:hover::after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 22px; /* clean spacing between eyebrow, title, text, buttons, badges */
+  gap: 22px;
 }
 
 .hero-eyebrow {
@@ -206,14 +215,12 @@ nav a:hover::after {
   max-width: 460px;
 }
 
-/* Buttons under hero text */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
 }
 
-/* Badges row */
 .badge-row {
   display: flex;
   flex-wrap: wrap;
@@ -236,7 +243,6 @@ nav a:hover::after {
   padding: 20px 22px 18px;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--card-border);
-  color: var(--text-main);
 }
 
 [data-theme="light"] .hero-card {
@@ -262,12 +268,12 @@ nav a:hover::after {
   color: var(--text-muted);
 }
 
-/* Floating animation */
+/* Floating effect */
 .floating {
   animation: float 5s ease-in-out infinite;
 }
 
-/* Buttons --------------------------------------------------------------- */
+/* BUTTONS --------------------------------------------------------------- */
 .btn {
   display: inline-block;
   padding: 9px 18px;
@@ -281,11 +287,11 @@ nav a:hover::after {
     color var(--transition-fast),
     transform 0.12s ease,
     box-shadow var(--transition-fast);
-  outline: none; /* kill default blue outline */
+  outline: none;
 }
 
 .btn:focus-visible {
-  box-shadow: 0 0 0 2px var(--accent); /* clean custom focus */
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 .btn.primary {
@@ -326,7 +332,7 @@ nav a:hover::after {
   color: #e5e7eb;
 }
 
-/* Sections -------------------------------------------------------------- */
+/* SECTIONS -------------------------------------------------------------- */
 .section {
   padding: 40px 24px 32px;
 }
@@ -347,7 +353,7 @@ nav a:hover::after {
   color: #9ca3af;
 }
 
-/* About grid ------------------------------------------------------------ */
+/* ABOUT GRID ------------------------------------------------------------ */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -378,7 +384,7 @@ nav a:hover::after {
   border-color: var(--accent);
 }
 
-/* XP bars --------------------------------------------------------------- */
+/* XP BARS --------------------------------------------------------------- */
 .xp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -425,14 +431,14 @@ nav a:hover::after {
   color: var(--text-muted);
 }
 
-/* Timeline -------------------------------------------------------------- */
-
+/* TIMELINE -------------------------------------------------------------- */
 .timeline {
   position: relative;
   padding-left: 22px;
   border-left: 2px solid rgba(148, 163, 184, 0.6);
-  display: grid;
-  gap: 24px; /* more space between steps */
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* nice spacing between rows */
 }
 
 .timeline-item {
@@ -450,8 +456,6 @@ nav a:hover::after {
   box-shadow: 0 0 6px rgba(99, 102, 241, 0.7);
 }
 
-
-
 .timeline-content h3 {
   font-size: 15px;
   margin-bottom: 4px;
@@ -462,7 +466,7 @@ nav a:hover::after {
   color: var(--text-muted);
 }
 
-/* Project cards --------------------------------------------------------- */
+/* PROJECT CARDS --------------------------------------------------------- */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -509,7 +513,7 @@ nav a:hover::after {
   border-color: var(--accent);
 }
 
-/* Skills ---------------------------------------------------------------- */
+/* SKILLS --------------------------------------------------------------- */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -531,7 +535,7 @@ nav a:hover::after {
   margin-top: 4px;
 }
 
-/* About / Contact text -------------------------------------------------- */
+/* CONTACT TEXT ---------------------------------------------------------- */
 .about-text {
   max-width: 640px;
   font-size: 15px;
@@ -539,7 +543,7 @@ nav a:hover::after {
   margin-bottom: 10px;
 }
 
-/* Phones list page ------------------------------------------------------ */
+/* PHONES LIST PAGE ------------------------------------------------------ */
 .phones-hero {
   padding: 40px 24px 24px;
 }
@@ -594,7 +598,7 @@ nav a:hover::after {
   border-color: #22c55e;
 }
 
-/* Phone detail pages ---------------------------------------------------- */
+/* PHONE DETAIL PAGES ---------------------------------------------------- */
 .phone-detail {
   padding: 40px 32px 32px;
   max-width: 820px;
@@ -649,7 +653,7 @@ nav a:hover::after {
   font-size: 14px;
 }
 
-/* Footer --------------------------------------------------------------- */
+/* FOOTER --------------------------------------------------------------- */
 .footer {
   text-align: center;
   padding: 18px;
