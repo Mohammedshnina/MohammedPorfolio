@@ -281,6 +281,12 @@ nav a:hover::after {
     color var(--transition-fast),
     transform 0.12s ease,
     box-shadow var(--transition-fast);
+  outline: none;              /* remove blue browser outline */
+}
+
+/* optional: custom focus so keyboard users still see something */
+.btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 .btn.primary {
@@ -443,6 +449,28 @@ nav a:hover::after {
   background: var(--accent);
   box-shadow: 0 0 6px rgba(99, 102, 241, 0.7);
 }
+.timeline {
+  padding-left: 18px;
+  border-left: 2px solid rgba(148, 163, 184, 0.6);
+  display: grid;
+  gap: 24px;           /* more space between items */
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.7);
+}
+
 
 .timeline-content h3 {
   font-size: 15px;
