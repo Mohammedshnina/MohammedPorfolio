@@ -428,10 +428,11 @@ nav a:hover::after {
 /* Timeline -------------------------------------------------------------- */
 
 .timeline {
-  padding-left: 18px;
+  position: relative;
+  padding-left: 22px;
   border-left: 2px solid rgba(148, 163, 184, 0.6);
   display: grid;
-  gap: 24px;           /* more space between items */
+  gap: 24px; /* more space between steps */
 }
 
 .timeline-item {
@@ -440,14 +441,15 @@ nav a:hover::after {
 
 .timeline-dot {
   position: absolute;
-  left: -9px;
-  top: 4px;
+  left: -7px;
+  top: 6px;
   width: 10px;
   height: 10px;
   border-radius: 999px;
   background: var(--accent);
   box-shadow: 0 0 6px rgba(99, 102, 241, 0.7);
 }
+
 
 
 .timeline-content h3 {
