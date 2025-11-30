@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Mohammed | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
   <script>
-    // Stop the browser trying to restore your old scroll position
+    // Stop browser from restoring old scroll position
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
@@ -22,7 +22,6 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
       <span class="theme-toggle-icon">🌞</span>
@@ -277,10 +276,10 @@
       window.scrollTo(0, 0);
     });
 
-    // Year
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme toggle
+    // THEME TOGGLE (shared logic)
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
