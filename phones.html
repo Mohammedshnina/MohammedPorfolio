@@ -1,57 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <title>Phones I Fix | Mohammed</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Phones I’ve worked on | Mohammed</title>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
+      <a href="index.html#hero">Home</a>
       <a href="index.html#projects">Projects</a>
       <a href="phones.html">Phones</a>
-      <a href="index.html#skills">Skills</a>
+      <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
   </header>
 
   <main>
     <section class="phones-hero">
       <h1 class="section-title">Phones I’ve worked on</h1>
       <p class="section-subtitle">
-        Click a phone to see specs and repair notes.
+        A small “repair library” showing devices I’ve opened, fixed or studied.
+        Each card links to a page with specs and repair notes.
       </p>
+
+      <div class="phones-legend">
+        <span><span class="legend-dot success"></span>Success</span>
+        <span><span class="legend-dot learning"></span>Learning / in progress</span>
+      </div>
     </section>
 
-    <section class="section">
+    <section class="section phones-section">
       <div class="phones-grid">
-
-        <article class="phone-card">
-          <a href="phones/iphone-11.html">
-            <h3>iPhone 11</h3>
-            <p class="phone-meta">Screen replacement</p>
-            <p class="phone-status success">Status: Success</p>
-          </a>
-        </article>
-
-        <article class="phone-card">
-          <a href="phones/iphone-xr.html">
-            <h3>iPhone XR</h3>
-            <p class="phone-meta">Battery swap</p>
-            <p class="phone-status success">Status: Success</p>
-          </a>
-        </article>
-
+        <!-- Galaxy S10 -->
         <article class="phone-card">
           <a href="phones/galaxy-s10.html">
-            <h3>Galaxy S10</h3>
-            <p class="phone-meta">Diagnostics / repair</p>
-            <p class="phone-status success">Status: Success</p>
+            <div class="phone-header">
+              <div>
+                <h3 class="phone-name">Samsung Galaxy S10</h3>
+                <p class="phone-meta">Android · 2019 flagship</p>
+              </div>
+              <span class="phone-status-pill success">Success</span>
+            </div>
+
+            <p class="phone-summary">
+              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice
+              for back‑glass removal and tricky screen/battery swaps.
+            </p>
+
+            <div class="phone-chip-row">
+              <span class="phone-chip">Back glass</span>
+              <span class="phone-chip">Screen</span>
+              <span class="phone-chip">Battery</span>
+            </div>
           </a>
         </article>
 
+        <!-- iPhone 11 -->
+        <article class="phone-card">
+          <a href="phones/iphone-11.html">
+            <div class="phone-header">
+              <div>
+                <h3 class="phone-name">iPhone 11</h3>
+                <p class="phone-meta">iOS · 2019</p>
+              </div>
+              <span class="phone-status-pill success">Success</span>
+            </div>
+
+            <p class="phone-summary">
+              Dual‑camera iPhone with Face ID. Nice training for display swaps,
+              keeping Face ID intact and re‑sealing the frame.
+            </p>
+
+            <div class="phone-chip-row">
+              <span class="phone-chip">Screen</span>
+              <span class="phone-chip">Face ID</span>
+              <span class="phone-chip">Water seal</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- iPhone XR -->
+        <article class="phone-card">
+          <a href="phones/iphone-xr.html">
+            <div class="phone-header">
+              <div>
+                <h3 class="phone-name">iPhone XR</h3>
+                <p class="phone-meta">iOS · 2018</p>
+              </div>
+              <span class="phone-status-pill learning">Learning</span>
+            </div>
+
+            <p class="phone-summary">
+              LCD iPhone with a simpler camera setup. Good for learning safe
+              opening, battery removal and connector handling.
+            </p>
+
+            <div class="phone-chip-row">
+              <span class="phone-chip">Battery</span>
+              <span class="phone-chip">LCD</span>
+              <span class="phone-chip">Practice</span>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
   </main>
@@ -59,8 +115,38 @@
   <footer class="footer">
     © <span id="year"></span> Mohammed
   </footer>
+
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
   </script>
 </body>
 </html>
