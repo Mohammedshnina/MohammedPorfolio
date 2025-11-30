@@ -5,7 +5,6 @@
   <title>Mohammed | Portfolio</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <script>
-    // Stop browser from restoring old scroll position
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
@@ -30,7 +29,7 @@
 
   <main>
 
-    <!-- HERO ------------------------------------------------------------ -->
+    <!-- HERO -->
     <section id="hero" class="hero reveal">
       <div class="hero-inner">
         <div class="hero-text-block">
@@ -71,7 +70,7 @@
       </div>
     </section>
 
-    <!-- ABOUT ----------------------------------------------------------- -->
+    <!-- ABOUT -->
     <section id="about" class="section reveal">
       <h2 class="section-title">About me</h2>
       <p class="section-subtitle">
@@ -129,7 +128,7 @@
       </div>
     </section>
 
-    <!-- JOURNEY / TIMELINE ----------------------------------------------- -->
+    <!-- JOURNEY -->
     <section class="section reveal">
       <h2 class="section-title">My journey so far</h2>
       <p class="section-subtitle">
@@ -172,7 +171,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS --------------------------------------------------------- -->
+    <!-- PROJECTS -->
     <section id="projects" class="section reveal">
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">
@@ -218,7 +217,7 @@
       </div>
     </section>
 
-    <!-- SKILLS ----------------------------------------------------------- -->
+    <!-- SKILLS -->
     <section id="skills" class="section reveal">
       <h2 class="section-title">Skills</h2>
 
@@ -250,7 +249,7 @@
       </div>
     </section>
 
-    <!-- CONTACT ---------------------------------------------------------- -->
+    <!-- CONTACT -->
     <section id="contact" class="section reveal">
       <h2 class="section-title">Contact</h2>
       <p class="about-text">
@@ -271,15 +270,15 @@
   </footer>
 
   <script>
-    // Always start at the very top
+    // Start at top
     window.addEventListener("load", () => {
       window.scrollTo(0, 0);
     });
 
-    // Year in footer
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // THEME TOGGLE (shared logic)
+    // Theme toggle
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
