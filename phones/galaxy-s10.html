@@ -1,80 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <title>Samsung Galaxy S10 | Repair & Specs – Mohammed</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Galaxy S10 Repair & Specs | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
-      <a href="../index.html">Home</a>
+      <a href="../index.html#hero">Home</a>
       <a href="../phones.html">Phones</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
   </header>
 
-  <main class="phone-detail card">
-    <h1>Samsung Galaxy S10</h1>
-    <p class="status success">Repair Status: Success</p>
+  <main class="phone-detail">
+    <div class="phone-detail-inner">
+      <header class="phone-detail-header">
+        <h1>Samsung Galaxy S10</h1>
+        <span class="phone-chip-main">Android · 2019 flagship</span>
+        <span class="status success">Repair status: Success</span>
+      </header>
 
-    <!-- Add your real repair image here -->
-    <!-- Example: <img src="../images/s10.jpg" class="phone-img" alt="S10 repair"> -->
+      <div class="phone-detail-top">
+        <div>
+          <p>
+            The Galaxy S10 is one of Samsung’s 2019 flagships. It has a curved
+            Dynamic AMOLED display, in‑screen fingerprint sensor and a triple‑camera
+            setup on the back.
+          </p>
+          <ul>
+            <li><strong>Display:</strong> 6.1″ Dynamic AMOLED, 1440×3040 (Infinity‑O)</li>
+            <li><strong>Chipset:</strong> Exynos 9820 / Snapdragon 855 (region‑dependent)</li>
+            <li><strong>RAM / Storage:</strong> 8 GB RAM, 128 GB+ storage, microSD</li>
+            <li><strong>Battery:</strong> ~3400 mAh, fast + wireless charging</li>
+            <li><strong>Cameras:</strong> Wide, ultra‑wide and telephoto rear cameras</li>
+            <li><strong>OS at launch:</strong> Android 9 (One UI)</li>
+          </ul>
+        </div>
 
-    <section>
-      <h2>📦 Device Specifications</h2>
-      <ul>
-        <li><strong>Display:</strong> 6.1″ Dynamic AMOLED, 1440×3040 (Infinity‑O)</li>
-        <li><strong>Chipset:</strong> Exynos 9820 / Snapdragon 855</li>
-        <li><strong>RAM & Storage:</strong> 8 GB RAM, 128 GB+ storage, microSD</li>
-        <li><strong>Battery:</strong> ~3400 mAh, fast/wireless charging</li>
-        <li><strong>Cameras:</strong> Triple rear (wide, ultra‑wide, telephoto)</li>
-        <li><strong>Release year:</strong> 2019</li>
-      </ul>
-    </section>
+        <div>
+          <!-- Replace src with your real S10 repair photo path if you have one -->
+          <!-- Example: ../images/s10-fix.jpg -->
+          <img src="../images/my-fix-s10.jpg" alt="Galaxy S10 repair photo" class="phone-img" />
+          <p class="about-text">
+            Photo from my repair session. I focus on opening safely, protecting
+            the curved display and keeping cables intact.
+          </p>
+        </div>
+      </div>
 
-    <section>
-      <h2>🧠 Inside the Galaxy S10</h2>
-      <p>
-        The S10 has a main board, daughterboard for the USB‑C port, glued‑in battery,
-        separate camera modules and multiple flex cables connecting everything.
+      <section>
+        <h2>🧠 Inside the Galaxy S10</h2>
+        <p>
+          Inside the S10 there are several major parts you need to know about
+          before starting a repair:
+        </p>
+        <ul>
+          <li>
+            <strong>Main board:</strong> holds the CPU, RAM, storage and power
+            management. Most flex cables plug into this.
+          </li>
+          <li>
+            <strong>Battery:</strong> slim Li‑Ion cell glued to the frame with strong
+            adhesive. Removing it safely is a key skill.
+          </li>
+          <li>
+            <strong>Display assembly:</strong> AMOLED panel, touch layer and front
+            glass fused as one piece – cracking this is expensive.
+          </li>
+          <li>
+            <strong>Charging daughterboard:</strong> USB‑C port, microphone and some
+            antenna parts live here.
+          </li>
+          <li>
+            <strong>Camera modules:</strong> separate wide, ultra‑wide and telephoto
+            units connected by flex cables.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔧 Repair notes (my process)</h2>
+        <p>
+          Example flow you can adapt with your real notes:
+        </p>
+        <ul>
+          <li>Heated the back glass and used thin picks to slowly separate the adhesive.</li>
+          <li>Removed the wireless charging coil and plastic covers around the board.</li>
+          <li>Disconnected the battery first before touching any other connector.</li>
+          <li>Inspected the USB‑C board and screen connector for damage or corrosion.</li>
+          <li>Swapped the faulty part (for example the screen or charging board).</li>
+          <li>Re‑connected everything, re‑seated the battery and tested boot, charging and cameras.</li>
+          <li>Re‑sealed the back with fresh adhesive and checked for flex in the frame.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔗 Sources & references</h2>
+        <p>Good places to learn more about the Galaxy S10 hardware:</p>
+        <ul>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S10" target="_blank">
+              Samsung Galaxy S10 — Wikipedia
+            </a>
+          </li>
+          <li>
+            <a href="https://www.samsung.com/global/galaxy/galaxy-s10/" target="_blank">
+              Official Samsung Galaxy S10 page
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+S10+Teardown/120964" target="_blank">
+              Galaxy S10 teardown — iFixit
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="back-link">
+        <a href="../phones.html">← Back to all phones</a>
       </p>
-      <p>
-        Opening the phone requires heating the back glass, lifting it carefully,
-        then disconnecting the battery before any further work.
-      </p>
-    </section>
-
-    <section>
-      <h2>🔧 Repair Notes</h2>
-      <p>Replace these with your real repair notes:</p>
-      <ul>
-        <li>Heated and removed the back glass.</li>
-        <li>Disconnected the battery before replacing parts.</li>
-        <li>Cleaned connectors and installed new components.</li>
-        <li>Re‑assembled and tested charging, screen and cameras.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🔗 Sources & References</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S10" target="_blank">Samsung Galaxy S10 — Wikipedia</a></li>
-        <li><a href="https://www.ifixit.com/Teardown/Samsung+Galaxy+S10+Teardown/120964" target="_blank">iFixit Teardown</a></li>
-      </ul>
-    </section>
-
-    <p class="back-link">
-      <a href="../phones.html">← Back to all phones</a>
-    </p>
+    </div>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Mohammed</footer>
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+  </script>
 </body>
 </html>
