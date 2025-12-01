@@ -4,8 +4,15 @@
   <meta charset="utf-8" />
   <title>Phones I’ve worked on | Mohammed</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
 </head>
 <body>
+
+  <!-- NAVBAR (same style as home) -->
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -22,7 +29,8 @@
   </header>
 
   <main>
-    <section class="phones-hero">
+    <!-- HERO TEXT -->
+    <section class="phones-hero section reveal">
       <h1 class="section-title">Phones I’ve worked on</h1>
       <p class="section-subtitle">
         A small “repair library” showing devices I’ve opened, fixed or studied.
@@ -30,27 +38,35 @@
       </p>
 
       <div class="phones-legend">
-        <span><span class="legend-dot success"></span>Success</span>
-        <span><span class="legend-dot learning"></span>Learning / in progress</span>
+        <span>
+          <span class="legend-dot success"></span>
+          <strong>Success</strong> – repair went well
+        </span>
+        <span>
+          <span class="legend-dot learning"></span>
+          <strong>Learning</strong> – in progress / practice
+        </span>
       </div>
     </section>
 
-    <section class="section phones-section">
+    <!-- PHONE CARDS -->
+    <section class="section phones-section reveal">
       <div class="phones-grid">
-        <!-- Galaxy S10 -->
+
+        <!-- S10 ------------------------------------------------------- -->
         <article class="phone-card">
           <a href="phones/galaxy-s10.html">
             <div class="phone-header">
               <div>
-                <h3 class="phone-name">Samsung Galaxy S10</h3>
+                <h2 class="phone-name">Samsung Galaxy S10</h2>
                 <p class="phone-meta">Android · 2019 flagship</p>
               </div>
               <span class="phone-status-pill success">Success</span>
             </div>
 
             <p class="phone-summary">
-              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice
-              for back‑glass removal and tricky screen/battery swaps.
+              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice for
+              back‑glass removal and tricky screen / battery swaps.
             </p>
 
             <div class="phone-chip-row">
@@ -61,53 +77,54 @@
           </a>
         </article>
 
-        <!-- iPhone 11 -->
+        <!-- iPhone 11 ------------------------------------------------- -->
         <article class="phone-card">
           <a href="phones/iphone-11.html">
             <div class="phone-header">
               <div>
-                <h3 class="phone-name">iPhone 11</h3>
+                <h2 class="phone-name">iPhone 11</h2>
                 <p class="phone-meta">iOS · 2019</p>
               </div>
               <span class="phone-status-pill success">Success</span>
             </div>
 
             <p class="phone-summary">
-              Dual‑camera iPhone with Face ID. Nice training for display swaps,
-              keeping Face ID intact and re‑sealing the frame.
+              Dual‑camera iPhone with Face ID. Good for display swaps, keeping
+              Face ID intact and re‑sealing the frame.
             </p>
 
             <div class="phone-chip-row">
               <span class="phone-chip">Screen</span>
-              <span class="phone-chip">Face ID</span>
+              <span class="phone-chip">Face ID care</span>
               <span class="phone-chip">Water seal</span>
             </div>
           </a>
         </article>
 
-        <!-- iPhone XR -->
+        <!-- iPhone XR ------------------------------------------------- -->
         <article class="phone-card">
           <a href="phones/iphone-xr.html">
             <div class="phone-header">
               <div>
-                <h3 class="phone-name">iPhone XR</h3>
+                <h2 class="phone-name">iPhone XR</h2>
                 <p class="phone-meta">iOS · 2018</p>
               </div>
               <span class="phone-status-pill learning">Learning</span>
             </div>
 
             <p class="phone-summary">
-              LCD iPhone with a simpler camera setup. Good for learning safe
+              LCD iPhone with a simpler camera setup. Great for learning safe
               opening, battery removal and connector handling.
             </p>
 
             <div class="phone-chip-row">
               <span class="phone-chip">Battery</span>
-              <span class="phone-chip">LCD</span>
-              <span class="phone-chip">Practice</span>
+              <span class="phone-chip">LCD practice</span>
+              <span class="phone-chip">Connectors</span>
             </div>
           </a>
         </article>
+
       </div>
     </section>
   </main>
@@ -117,10 +134,17 @@
   </footer>
 
   <script>
+    // Always start near top on load
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // THEME TOGGLE (same as index.html)
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
     if (toggle) {
       const icon = toggle.querySelector(".theme-toggle-icon");
@@ -128,7 +152,7 @@
       function setTheme(theme) {
         root.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
-        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
       }
 
       const saved = localStorage.getItem("theme");
@@ -147,6 +171,21 @@
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
+
+    // Simple reveal animation reuse
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
