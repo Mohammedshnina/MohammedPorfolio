@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <title>Mohammed | Portfolio</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <script>
-    // Stop browser from restoring old scroll position
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
   </script>
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -24,34 +22,28 @@
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🌞</span>
+      <span class="theme-toggle-icon">🎮</span>
     </button>
   </header>
 
   <main>
-
-    <!-- HERO ------------------------------------------------------------ -->
+    <!-- HERO -->
     <section id="hero" class="hero reveal">
       <div class="hero-inner">
         <div class="hero-text-block">
           <p class="hero-eyebrow">Student · Web · Phone repair</p>
-
           <h1 class="hero-title">
             Hi, I’m Mohammed.<br />
             I fix phones and build games.
           </h1>
-
           <p class="hero-text">
-            I like understanding how things work – both hardware and code.  
-            I enjoy taking phones apart, fixing them, and building small
-            web projects and games that actually run in the browser.
+            I enjoy taking things apart, understanding how they work, and then
+            putting them back together — whether that’s a broken phone or a small web game.
           </p>
-
           <div class="hero-actions">
             <a href="#projects" class="btn primary">See my projects</a>
             <a href="phones.html" class="btn ghost">Phones I’ve fixed</a>
           </div>
-
           <div class="badge-row">
             <span class="badge">🔧 Phone repair</span>
             <span class="badge">🎮 Gaming</span>
@@ -60,49 +52,45 @@
           </div>
         </div>
 
-        <div class="hero-card floating">
+        <aside class="hero-card floating">
           <p class="hero-card-label">Profile</p>
-          <h2>Where I’m at right now</h2>
+          <h2>Right now I’m</h2>
           <ul>
-            <li>Learning HTML, CSS and JavaScript</li>
-            <li>Practising real phone repairs</li>
+            <li>Learning frontend & JavaScript</li>
+            <li>Practicing real phone repairs</li>
             <li>Experimenting with browser games</li>
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <!-- ABOUT ----------------------------------------------------------- -->
+    <!-- ABOUT -->
     <section id="about" class="section reveal">
       <h2 class="section-title">About me</h2>
       <p class="section-subtitle">
-        A quick overview of who I am, how I work and what I’m trying to build.
+        Who I am, how I work, and what I’m trying to build.
       </p>
 
       <div class="about-grid">
         <article class="about-card">
           <h3>Who I am</h3>
           <p>
-            I’m a student who likes breaking things down into simple steps.
-            I enjoy fixing phones and writing code that feels smooth and simple
-            to use.
+            I’m a student who likes understanding how things work, especially phones
+            and websites. I’d rather fix a problem than ignore it.
           </p>
         </article>
-
         <article class="about-card">
           <h3>How I work</h3>
           <p>
-            I test, watch what happens, then adjust. Whether it’s a broken
-            screen or a bug in code, I want to understand the real problem
-            instead of just guessing.
+            I break problems into small steps: test, observe, adjust. Whether it’s a
+            cracked screen or a bug in code, I look for the real cause first.
           </p>
         </article>
-
         <article class="about-card">
-          <h3>What I’m building</h3>
+          <h3>What I want</h3>
           <p>
-            A portfolio that shows real skills: phone repairs that are properly
-            documented and web projects that you can actually click and play with.
+            A portfolio that feels real — working repairs, working games, and a
+            clear path of how I improved over time.
           </p>
         </article>
       </div>
@@ -110,85 +98,76 @@
       <div class="xp-grid">
         <div class="xp-card">
           <div class="xp-label">Frontend</div>
-          <div class="xp-bar">
-            <div class="xp-fill xp-frontend"></div>
-          </div>
-          <p class="xp-caption">HTML, CSS, basic JS & UI animations.</p>
+          <div class="xp-bar"><div class="xp-fill xp-frontend"></div></div>
+          <p class="xp-caption">HTML, CSS, basic JS & animations.</p>
         </div>
         <div class="xp-card">
           <div class="xp-label">Phone repair</div>
-          <div class="xp-bar">
-            <div class="xp-fill xp-repair"></div>
-          </div>
-          <p class="xp-caption">Screen and battery replacements, small fixes.</p>
+          <div class="xp-bar"><div class="xp-fill xp-repair"></div></div>
+          <p class="xp-caption">Screens, batteries, simple board fixes.</p>
         </div>
         <div class="xp-card">
           <div class="xp-label">Game dev</div>
-          <div class="xp-bar">
-            <div class="xp-fill xp-games"></div>
-          </div>
-          <p class="xp-caption">Simple browser games and experiments.</p>
+          <div class="xp-bar"><div class="xp-fill xp-games"></div></div>
+          <p class="xp-caption">Small browser games and experiments.</p>
         </div>
       </div>
     </section>
 
-    <!-- JOURNEY / TIMELINE ----------------------------------------------- -->
+    <!-- JOURNEY -->
     <section class="section reveal">
       <h2 class="section-title">My journey so far</h2>
       <p class="section-subtitle">
-        A small timeline of how I went from curiosity to repairing phones and
-        building web projects.
+        How I went from “what happens if I open this?” to building a repair + game portfolio.
       </p>
 
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>First curiosity</h3>
+            <h3>Started experimenting with tech</h3>
             <p>
-              I started by wondering what was inside electronics around me:
-              controllers, phones, anything I could safely open.
+              I opened old phones and random electronics to see how they were built.
+              Curiosity first, fear later.
             </p>
           </div>
         </div>
-
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Discovering web development</h3>
+            <h3>Found web development</h3>
             <p>
-              I realised HTML, CSS and JavaScript could turn ideas into pages
-              and games that live in the browser.
+              Learned that HTML, CSS and JavaScript can turn ideas into things
+              people can click and use in the browser.
             </p>
           </div>
         </div>
-
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Combining repair + code</h3>
+            <h3>Mixing repair + code</h3>
             <p>
-              Now I document the phones I work on and create a small game hub,
-              so I can grow in both hardware and software at the same time.
+              Now I document the phones I work on and build games/web projects,
+              so my skills grow in both hardware and software.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS --------------------------------------------------------- -->
+    <!-- PROJECTS -->
     <section id="projects" class="section reveal">
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">
-        A mix of repair work, web projects and small browser games.
+        A mix of web work, games and phone repair experience.
       </p>
 
       <div class="cards">
         <article class="card">
           <h3>Phone repair log</h3>
           <p>
-            Tracking the repairs I do: which parts I changed, what went wrong,
-            and what I learned from each device.
+            A simple log for every device I open: what was wrong, which parts I changed,
+            and what I learned from that repair.
           </p>
           <div class="card-tags">
             <span class="tag">Hardware</span>
@@ -199,8 +178,8 @@
         <article class="card">
           <h3>Game hub</h3>
           <p>
-            A collection of small browser games built with HTML, CSS and
-            JavaScript, focusing on simple controls and quick fun.
+            A small hub of browser games made with HTML, CSS and JavaScript.
+            Simple mechanics, fast rounds, fun to tweak.
           </p>
           <div class="card-tags">
             <span class="tag">Web</span>
@@ -211,8 +190,8 @@
         <article class="card">
           <h3>Dodge square</h3>
           <p>
-            A reaction game where you dodge falling blocks. Good practice for
-            movement, collisions and basic game loops.
+            A reaction game dodging falling blocks. Good practice for collision,
+            timing and basic JS game loops.
           </p>
           <div class="card-tags">
             <span class="tag">JavaScript</span>
@@ -222,15 +201,14 @@
       </div>
     </section>
 
-    <!-- SKILLS ----------------------------------------------------------- -->
+    <!-- SKILLS -->
     <section id="skills" class="section reveal">
       <h2 class="section-title">Skills</h2>
-
       <div class="skills">
         <div class="skills-column">
           <h3>Web</h3>
           <ul>
-            <li>HTML structure and clean layout</li>
+            <li>HTML structure & semantics</li>
             <li>Modern CSS (flexbox & grid)</li>
             <li>JavaScript for interactivity & games</li>
           </ul>
@@ -246,15 +224,15 @@
         <div class="skills-column">
           <h3>Mindset & tools</h3>
           <ul>
-            <li>Using GitHub & GitHub Pages</li>
-            <li>Reading guides and teardowns</li>
+            <li>GitHub & GitHub Pages</li>
+            <li>Reading docs, teardowns & guides</li>
             <li>Staying patient when things break</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT ---------------------------------------------------------- -->
+    <!-- CONTACT -->
     <section id="contact" class="section reveal">
       <h2 class="section-title">Contact</h2>
       <p class="about-text">
@@ -267,7 +245,6 @@
         I’m open to feedback, ideas and chances to repair or build more things.
       </p>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -275,27 +252,28 @@
   </footer>
 
   <script>
-    // Always start at the very top
+    // Always start at top
     window.addEventListener("load", () => {
       window.scrollTo(0, 0);
     });
 
-    // Year in footer
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // THEME TOGGLE
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
-    if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-
-      function setTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      if (toggle) {
+        const icon = toggle.querySelector(".theme-toggle-icon");
         icon.textContent = theme === "dark" ? "🎮" : "🌞";
       }
+    }
 
+    if (toggle) {
       const saved = localStorage.getItem("theme");
       if (saved) {
         setTheme(saved);
@@ -307,8 +285,7 @@
       }
 
       toggle.addEventListener("click", () => {
-        const current =
-          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
@@ -326,7 +303,6 @@
       },
       { threshold: 0.15 }
     );
-
     revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
