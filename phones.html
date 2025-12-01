@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <title>Phones I’ve worked on | Mohammed</title>
@@ -11,8 +11,6 @@
   </script>
 </head>
 <body>
-
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -24,17 +22,16 @@
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🌞</span>
+      <span class="theme-toggle-icon">🎮</span>
     </button>
   </header>
 
   <main>
-    <!-- HERO TEXT -->
     <section class="phones-hero section reveal">
       <h1 class="section-title">Phones I’ve worked on</h1>
       <p class="section-subtitle">
-        A small “repair library” showing devices I’ve opened, fixed or studied.
-        Each card links to a page with specs and repair notes.
+        A small repair library of devices I’ve opened, fixed or used for practice.
+        Each card links to a full page with specs and repair notes.
       </p>
 
       <div class="phones-legend">
@@ -44,15 +41,13 @@
         </span>
         <span>
           <span class="legend-dot learning"></span>
-          <strong>Learning</strong> – in progress / practice
+          <strong>Learning</strong> – still practising
         </span>
       </div>
     </section>
 
-    <!-- PHONE CARDS -->
     <section class="section phones-section reveal">
       <div class="phones-grid">
-
         <!-- S10 -->
         <article class="phone-card">
           <a href="phones/galaxy-s10.html">
@@ -63,12 +58,10 @@
               </div>
               <span class="phone-status-pill success">Success</span>
             </div>
-
             <p class="phone-summary">
-              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice
-              for back‑glass removal and tricky screen / battery swaps.
+              Curved AMOLED with in‑screen fingerprint. Great practice for
+              back‑glass removal and careful screen/battery swaps.
             </p>
-
             <div class="phone-chip-row">
               <span class="phone-chip">Back glass</span>
               <span class="phone-chip">Screen</span>
@@ -87,12 +80,10 @@
               </div>
               <span class="phone-status-pill success">Success</span>
             </div>
-
             <p class="phone-summary">
-              Dual‑camera iPhone with Face ID. Good for display swaps, keeping
-              Face ID intact and re‑sealing the frame.
+              Dual‑camera iPhone with Face ID. Good for controlled screen swaps
+              while keeping Face ID and water sealing intact.
             </p>
-
             <div class="phone-chip-row">
               <span class="phone-chip">Screen</span>
               <span class="phone-chip">Face ID care</span>
@@ -111,12 +102,10 @@
               </div>
               <span class="phone-status-pill learning">Learning</span>
             </div>
-
             <p class="phone-summary">
-              LCD iPhone with a simpler camera setup. Great for learning safe
-              opening, battery removal and connector handling.
+              LCD iPhone with simpler camera setup. Good for learning safe
+              opening, connector handling and battery practice.
             </p>
-
             <div class="phone-chip-row">
               <span class="phone-chip">Battery</span>
               <span class="phone-chip">LCD practice</span>
@@ -124,7 +113,6 @@
             </div>
           </a>
         </article>
-
       </div>
     </section>
   </main>
@@ -140,19 +128,19 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme toggle (same logic as index)
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
-    if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-
-      function setTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      if (toggle) {
+        const icon = toggle.querySelector(".theme-toggle-icon");
         icon.textContent = theme === "dark" ? "🎮" : "🌞";
       }
+    }
 
+    if (toggle) {
       const saved = localStorage.getItem("theme");
       if (saved) {
         setTheme(saved);
@@ -164,13 +152,11 @@
       }
 
       toggle.addEventListener("click", () => {
-        const current =
-          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
 
-    // Reveal animation
     const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       entries => {
