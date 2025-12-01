@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <title>Phones I’ve worked on | Mohammed</title>
+  <title>Phones I've Repaired | Mohammed</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <script>
     if ("scrollRestoration" in history) {
@@ -22,50 +22,53 @@
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🎮</span>
+      <span class="theme-toggle-icon">🌞</span>
     </button>
   </header>
 
   <main>
+    <!-- Header section -->
     <section class="phones-hero section reveal">
-      <h1 class="section-title">Phones I’ve worked on</h1>
+      <h1 class="section-title">Phones I’ve Worked On</h1>
       <p class="section-subtitle">
-        A small repair library of devices I’ve opened, fixed or used for practice.
-        Each card links to a full page with specs and repair notes.
+        A little gallery of the phones I’ve opened, fixed, and experimented on.
+        Green = full success, yellow = still learning or practice device.
       </p>
 
       <div class="phones-legend">
         <span>
           <span class="legend-dot success"></span>
-          <strong>Success</strong> – repair went well
+          Success
         </span>
         <span>
           <span class="legend-dot learning"></span>
-          <strong>Learning</strong> – still practising
+          Learning / practice
         </span>
       </div>
     </section>
 
-    <section class="section phones-section reveal">
+    <!-- Cards section -->
+    <section class="phones-section section reveal">
       <div class="phones-grid">
-        <!-- S10 -->
+
+        <!-- Galaxy S10 -->
         <article class="phone-card">
           <a href="phones/galaxy-s10.html">
             <div class="phone-header">
               <div>
                 <h2 class="phone-name">Samsung Galaxy S10</h2>
-                <p class="phone-meta">Android · 2019 flagship</p>
+                <p class="phone-meta">2019 · Android · Infinity‑O AMOLED</p>
               </div>
-              <span class="phone-status-pill success">Success</span>
+              <span class="phone-status-pill success">Success ✓</span>
             </div>
             <p class="phone-summary">
-              Curved AMOLED with in‑screen fingerprint. Great practice for
-              back‑glass removal and careful screen/battery swaps.
+              Curved AMOLED, in‑screen fingerprint and triple cameras. One of my
+              favourite flagships to work on.
             </p>
             <div class="phone-chip-row">
-              <span class="phone-chip">Back glass</span>
-              <span class="phone-chip">Screen</span>
-              <span class="phone-chip">Battery</span>
+              <span class="phone-chip">Screen / charging</span>
+              <span class="phone-chip">Back glass opening</span>
+              <span class="phone-chip">Battery handling</span>
             </div>
           </a>
         </article>
@@ -76,18 +79,18 @@
             <div class="phone-header">
               <div>
                 <h2 class="phone-name">iPhone 11</h2>
-                <p class="phone-meta">iOS · 2019</p>
+                <p class="phone-meta">2019 · iOS · Dual camera</p>
               </div>
-              <span class="phone-status-pill success">Success</span>
+              <span class="phone-status-pill success">Success ✓</span>
             </div>
             <p class="phone-summary">
-              Dual‑camera iPhone with Face ID. Good for controlled screen swaps
-              while keeping Face ID and water sealing intact.
+              Great training phone for modern iPhone repairs – Face ID, dual
+              cameras and water sealing but still using LCD.
             </p>
             <div class="phone-chip-row">
-              <span class="phone-chip">Screen</span>
-              <span class="phone-chip">Face ID care</span>
-              <span class="phone-chip">Water seal</span>
+              <span class="phone-chip">Screen replacement</span>
+              <span class="phone-chip">Face ID safety</span>
+              <span class="phone-chip">Water seal practice</span>
             </div>
           </a>
         </article>
@@ -98,21 +101,22 @@
             <div class="phone-header">
               <div>
                 <h2 class="phone-name">iPhone XR</h2>
-                <p class="phone-meta">iOS · 2018</p>
+                <p class="phone-meta">2018 · iOS · Single camera</p>
               </div>
               <span class="phone-status-pill learning">Learning</span>
             </div>
             <p class="phone-summary">
-              LCD iPhone with simpler camera setup. Good for learning safe
-              opening, connector handling and battery practice.
+              My practice device. Simpler layout with one rear camera, perfect
+              for safe opening and battery work.
             </p>
             <div class="phone-chip-row">
-              <span class="phone-chip">Battery</span>
-              <span class="phone-chip">LCD practice</span>
-              <span class="phone-chip">Connectors</span>
+              <span class="phone-chip">Battery pull‑tabs</span>
+              <span class="phone-chip">Opening technique</span>
+              <span class="phone-chip">Connector discipline</span>
             </div>
           </a>
         </article>
+
       </div>
     </section>
   </main>
@@ -130,17 +134,15 @@
 
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
 
-    function setTheme(theme) {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      if (toggle) {
-        const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
         icon.textContent = theme === "dark" ? "🎮" : "🌞";
       }
-    }
 
-    if (toggle) {
       const saved = localStorage.getItem("theme");
       if (saved) {
         setTheme(saved);
@@ -152,7 +154,8 @@
       }
 
       toggle.addEventListener("click", () => {
-        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
