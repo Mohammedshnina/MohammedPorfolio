@@ -1,124 +1,119 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <title>iPhone 11 Repair & Specs | Mohammed</title>
+  <title>iPhone 11 – Repair log | Mohammed</title>
   <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
       <a href="../index.html#hero">Home</a>
-      <a href="../phones.html">Phones</a>
       <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🌞</span>
+      <span class="theme-toggle-icon">🎮</span>
     </button>
   </header>
 
-  <main class="phone-detail">
-    <div class="phone-detail-inner">
-      <header class="phone-detail-header">
-        <h1>iPhone 11</h1>
-        <span class="phone-chip-main">iOS · Dual‑camera</span>
-        <span class="status success">Repair status: Success</span>
-      </header>
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
 
-      <div class="phone-detail-top">
-        <div>
-          <p>
-            The iPhone 11 is a 2019 Apple device with a 6.1″ LCD screen, dual
-            camera system and Face ID. It’s a good phone to practise modern
-            iPhone disassembly and re‑assembly.
-          </p>
+      <div class="phone-detail-inner">
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 11</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2019</span>
+              <span class="phone-chip-main phone-chip-highlight">Dual camera · Face ID</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-success">Success ✓</span>
+          </div>
+        </header>
+
+        <div class="phone-detail-top">
+          <div class="phone-intro">
+            <p>
+              Popular iPhone with dual rear cameras and Face ID. Good device for
+              learning careful screen swaps without breaking sensors.
+            </p>
+            <div class="spec-pills">
+              <span class="spec-pill">6.1″ LCD</span>
+              <span class="spec-pill">A13 Bionic</span>
+              <span class="spec-pill">Dual camera</span>
+              <span class="spec-pill">IP68 water resistance</span>
+            </div>
+          </div>
+
+          <figure class="phone-image-card">
+            <!-- change if you add an 11 image -->
+            <img src="../images/iphone-11.jpg" alt="iPhone 11 repair" class="phone-img" />
+            <figcaption>Used mainly for screen and water‑seal practice.</figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
           <ul>
             <li><strong>Display:</strong> 6.1″ Liquid Retina IPS LCD</li>
-            <li><strong>Chipset:</strong> Apple A13 Bionic</li>
-            <li><strong>Storage:</strong> 64 / 128 / 256 GB</li>
-            <li><strong>Battery:</strong> around 3110 mAh</li>
-            <li><strong>Cameras:</strong> 12 MP wide + 12 MP ultra‑wide</li>
-            <li><strong>Biometrics:</strong> Face ID</li>
+            <li><strong>Chip:</strong> Apple A13 Bionic</li>
+            <li><strong>Storage:</strong> 64–256 GB</li>
+            <li><strong>Battery:</strong> ~3110 mAh</li>
+            <li><strong>Cameras:</strong> Dual 12 MP rear cameras</li>
+            <li><strong>Release year:</strong> 2019</li>
           </ul>
-        </div>
+        </section>
 
-        <div>
-          <!-- Put your real image if you have one -->
-          <img src="../images/my-fix-iphone11.jpg" alt="iPhone 11 repair" class="phone-img" />
-          <p class="about-text">
-            This phone is good for learning careful screen removal while
-            protecting the Face ID hardware.
-          </p>
-        </div>
-      </div>
+        <section class="phone-section-card">
+          <h2>🧠 Inside the iPhone 11</h2>
+          <ul>
+            <li>Logic board with stacked design on one side of the phone.</li>
+            <li>Battery taking most of the internal space, glued with pull tabs.</li>
+            <li>Display assembly with Face ID sensors and front speaker.</li>
+            <li>Taptic Engine and loudspeaker modules at the bottom.</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>🧠 Inside the iPhone 11</h2>
-        <p>
-          Like other Face ID iPhones, there are a few parts you have to be extra
-          careful with:
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Repair notes</h2>
+          <ol>
+            <li>Removed the display carefully around the notch area to protect Face ID.</li>
+            <li>Disconnected battery before dealing with screen or cameras.</li>
+            <li>Transferred sensors and earpiece from the old screen to the new one.</li>
+            <li>Re‑installed the display, checked Face ID and tested for touch / colour issues.</li>
+          </ol>
+        </section>
+
+        <section class="phone-section-card phone-links">
+          <h2>🔗 Sources &amp; references</h2>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/IPhone_11" target="_blank">iPhone 11 — Wikipedia</a></li>
+            <li><a href="https://www.ifixit.com/Device/iPhone_11" target="_blank">iPhone 11 guides — iFixit</a></li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
         </p>
-        <ul>
-          <li>
-            <strong>Logic board:</strong> compact, stacked board that holds the
-            A13 chip, storage and memory.
-          </li>
-          <li>
-            <strong>Display assembly:</strong> LCD panel + touch + front glass,
-            connected by a flex cable near the right side.
-          </li>
-          <li>
-            <strong>Face ID module:</strong> dot projector, infrared camera and
-            sensors – damaging this can disable Face ID permanently.
-          </li>
-          <li>
-            <strong>Battery:</strong> adhesive‑backed Li‑Ion cell with pull‑tabs
-            for safer removal.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🔧 Repair notes (example)</h2>
-        <ul>
-          <li>Removed the two pentalobe screws next to the charging port.</li>
-          <li>Used a suction cup and prying tools to lift the display from the side.</li>
-          <li>Opened the phone “book style” from the left, as Apple designs it.</li>
-          <li>Disconnected the battery before any screen or camera connectors.</li>
-          <li>Swapped the damaged display and transferred necessary brackets/sensors.</li>
-          <li>Re‑connected everything and tested touch, display, cameras and Face ID.</li>
-          <li>Cleaned the frame and re‑sealed the screen with fresh adhesive.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🔗 Sources & references</h2>
-        <ul>
-          <li>
-            <a href="https://en.wikipedia.org/wiki/IPhone_11" target="_blank">
-              iPhone 11 — Wikipedia
-            </a>
-          </li>
-          <li>
-            <a href="https://www.apple.com/iphone-11/" target="_blank">
-              Official Apple iPhone 11 page
-            </a>
-          </li>
-          <li>
-            <a href="https://www.ifixit.com/Teardown/iPhone+11+Teardown/126827" target="_blank">
-              iPhone 11 teardown — iFixit
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <p class="back-link">
-        <a href="../phones.html">← Back to all phones</a>
-      </p>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -126,37 +121,30 @@
   </footer>
 
   <script>
+    window.addEventListener("load", () => { window.scrollTo(0, 0); });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      if (toggle) toggle.querySelector(".theme-toggle-icon").textContent =
+        theme === "dark" ? "🎮" : "🌞";
+    }
     if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-
-      function setTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
-      }
-
       const saved = localStorage.getItem("theme");
-      if (saved) {
-        setTheme(saved);
-      } else {
+      if (saved) setTheme(saved); else {
         const prefersDark =
           window.matchMedia &&
           window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDark ? "dark" : "light");
       }
-
       toggle.addEventListener("click", () => {
-        const current =
-          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
   </script>
 </body>
 </html>
-
