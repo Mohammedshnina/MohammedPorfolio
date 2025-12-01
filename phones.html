@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR (same style as home) -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -53,7 +53,7 @@
     <section class="section phones-section reveal">
       <div class="phones-grid">
 
-        <!-- S10 ------------------------------------------------------- -->
+        <!-- S10 -->
         <article class="phone-card">
           <a href="phones/galaxy-s10.html">
             <div class="phone-header">
@@ -65,8 +65,8 @@
             </div>
 
             <p class="phone-summary">
-              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice for
-              back‑glass removal and tricky screen / battery swaps.
+              Curved Dynamic AMOLED with in‑screen fingerprint. Great practice
+              for back‑glass removal and tricky screen / battery swaps.
             </p>
 
             <div class="phone-chip-row">
@@ -77,7 +77,7 @@
           </a>
         </article>
 
-        <!-- iPhone 11 ------------------------------------------------- -->
+        <!-- iPhone 11 -->
         <article class="phone-card">
           <a href="phones/iphone-11.html">
             <div class="phone-header">
@@ -101,7 +101,7 @@
           </a>
         </article>
 
-        <!-- iPhone XR ------------------------------------------------- -->
+        <!-- iPhone XR -->
         <article class="phone-card">
           <a href="phones/iphone-xr.html">
             <div class="phone-header">
@@ -134,15 +134,13 @@
   </footer>
 
   <script>
-    // Always start near top on load
     window.addEventListener("load", () => {
       window.scrollTo(0, 0);
     });
 
-    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // THEME TOGGLE (same as index.html)
+    // Theme toggle (same logic as index)
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
@@ -172,7 +170,7 @@
       });
     }
 
-    // Simple reveal animation reuse
+    // Reveal animation
     const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       entries => {
