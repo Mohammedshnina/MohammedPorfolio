@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <title>iPhone 11 – Repair log | Mohammed</title>
@@ -22,7 +22,7 @@
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🎮</span>
+      <span class="theme-toggle-icon">🌞</span>
     </button>
   </header>
 
@@ -37,7 +37,7 @@
             <h1>iPhone 11</h1>
             <div class="phone-meta-bar">
               <span class="phone-chip-main">iOS · 2019</span>
-              <span class="phone-chip-main phone-chip-highlight">Dual camera · Face ID</span>
+              <span class="phone-chip-main phone-chip-highlight">Dual‑camera · Face ID</span>
             </div>
           </div>
           <div class="phone-status-stack">
@@ -49,21 +49,26 @@
         <div class="phone-detail-top">
           <div class="phone-intro">
             <p>
-              Popular iPhone with dual rear cameras and Face ID. Good device for
-              learning careful screen swaps without breaking sensors.
+              The iPhone 11 is a great training device for modern iPhone repairs:
+              Face ID, dual cameras and water sealing, but still using LCD instead
+              of OLED.
             </p>
             <div class="spec-pills">
               <span class="spec-pill">6.1″ LCD</span>
               <span class="spec-pill">A13 Bionic</span>
               <span class="spec-pill">Dual camera</span>
-              <span class="spec-pill">IP68 water resistance</span>
+              <span class="spec-pill">Face ID</span>
             </div>
           </div>
 
           <figure class="phone-image-card">
-            <!-- change if you add an 11 image -->
-            <img src="../images/iphone-11.jpg" alt="iPhone 11 repair" class="phone-img" />
-            <figcaption>Used mainly for screen and water‑seal practice.</figcaption>
+            <!-- change filename if needed -->
+            <img
+              src="../images/iphone-11.jpg"
+              alt="iPhone 11 repair photo"
+              class="phone-img"
+            />
+            <figcaption>Display swap practice: keeping Face ID and seals intact.</figcaption>
           </figure>
         </div>
 
@@ -76,28 +81,33 @@
             <li><strong>Chip:</strong> Apple A13 Bionic</li>
             <li><strong>Storage:</strong> 64–256 GB</li>
             <li><strong>Battery:</strong> ~3110 mAh</li>
-            <li><strong>Cameras:</strong> Dual 12 MP rear cameras</li>
-            <li><strong>Release year:</strong> 2019</li>
+            <li><strong>Cameras:</strong> 12 MP wide + 12 MP ultra‑wide</li>
+            <li><strong>Features:</strong> Face ID, IP68 water and dust resistance</li>
           </ul>
         </section>
 
         <section class="phone-section-card">
           <h2>🧠 Inside the iPhone 11</h2>
+          <p>Things that matter for repair:</p>
           <ul>
-            <li>Logic board with stacked design on one side of the phone.</li>
-            <li>Battery taking most of the internal space, glued with pull tabs.</li>
-            <li>Display assembly with Face ID sensors and front speaker.</li>
-            <li>Taptic Engine and loudspeaker modules at the bottom.</li>
+            <li>Logic board on the left side under shields and brackets.</li>
+            <li>Battery in the middle with pull‑tabs under it.</li>
+            <li>Display assembly holding the LCD, front camera and Face ID parts.</li>
+            <li>Lower speaker + Taptic Engine near the bottom.</li>
+            <li>Water‑sealing adhesive around the frame that you break when opening.</li>
           </ul>
         </section>
 
         <section class="phone-section-card phone-process">
-          <h2>🔧 Repair notes</h2>
+          <h2>🔧 Repair notes (my process)</h2>
+          <p>Example flow for a screen replacement:</p>
           <ol>
-            <li>Removed the display carefully around the notch area to protect Face ID.</li>
-            <li>Disconnected battery before dealing with screen or cameras.</li>
-            <li>Transferred sensors and earpiece from the old screen to the new one.</li>
-            <li>Re‑installed the display, checked Face ID and tested for touch / colour issues.</li>
+            <li>Powered off the phone and removed the two pentalobe screws at the bottom.</li>
+            <li>Heated the edges slightly and lifted the screen from the left side.</li>
+            <li>Disconnected the battery before touching the display connectors.</li>
+            <li>Moved over the front sensor / Face ID assembly carefully to the new screen.</li>
+            <li>Re‑connected the display, then the battery, and tested touch + cameras.</li>
+            <li>Re‑sealed the frame with fresh adhesive and closed the phone.</li>
           </ol>
         </section>
 
@@ -105,7 +115,7 @@
           <h2>🔗 Sources &amp; references</h2>
           <ul>
             <li><a href="https://en.wikipedia.org/wiki/IPhone_11" target="_blank">iPhone 11 — Wikipedia</a></li>
-            <li><a href="https://www.ifixit.com/Device/iPhone_11" target="_blank">iPhone 11 guides — iFixit</a></li>
+            <li><a href="https://www.ifixit.com/Device/iPhone_11" target="_blank">iFixit guides</a></li>
           </ul>
         </section>
 
@@ -121,30 +131,49 @@
   </footer>
 
   <script>
-    window.addEventListener("load", () => { window.scrollTo(0, 0); });
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
-    function setTheme(theme) {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      if (toggle) toggle.querySelector(".theme-toggle-icon").textContent =
-        theme === "dark" ? "🎮" : "🌞";
-    }
     if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
       const saved = localStorage.getItem("theme");
-      if (saved) setTheme(saved); else {
+      if (saved) {
+        setTheme(saved);
+      } else {
         const prefersDark =
           window.matchMedia &&
           window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDark ? "dark" : "light");
       }
       toggle.addEventListener("click", () => {
-        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
