@@ -1,109 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <title>iPhone XR Repair & Specs | Mohammed</title>
+  <title>iPhone XR – Repair log | Mohammed</title>
   <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
       <a href="../index.html#hero">Home</a>
-      <a href="../phones.html">Phones</a>
       <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🌞</span>
+      <span class="theme-toggle-icon">🎮</span>
     </button>
   </header>
 
-  <main class="phone-detail">
-    <div class="phone-detail-inner">
-      <header class="phone-detail-header">
-        <h1>iPhone XR</h1>
-        <span class="phone-chip-main">iOS · LCD training phone</span>
-        <span class="status success">Repair status: Learning / practice</span>
-      </header>
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
 
-      <div class="phone-detail-top">
-        <div>
-          <p>
-            The iPhone XR is an earlier Face ID iPhone with a 6.1″ LCD display.
-            It’s great for practising safe opening, battery removals and general
-            layout of modern iPhones without the complexity of Pro models.
-          </p>
+      <div class="phone-detail-inner">
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone XR</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2018</span>
+              <span class="phone-chip-main phone-chip-highlight">Single camera · LCD</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-success">Learning</span>
+          </div>
+        </header>
+
+        <div class="phone-detail-top">
+          <div class="phone-intro">
+            <p>
+              Great practice device: LCD display, simple single camera and cheaper parts.
+              I use this phone mainly for safe opening and connector practice.
+            </p>
+            <div class="spec-pills">
+              <span class="spec-pill">6.1″ LCD</span>
+              <span class="spec-pill">A12 Bionic</span>
+              <span class="spec-pill">Single rear camera</span>
+              <span class="spec-pill">Face ID</span>
+            </div>
+          </div>
+
+          <figure class="phone-image-card">
+            <!-- change if you add an XR image -->
+            <img src="../images/iphone-xr.jpg" alt="iPhone XR repair" class="phone-img" />
+            <figcaption>Used for learning safe disassembly and re‑assembly.</figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
           <ul>
-            <li><strong>Display:</strong> 6.1″ Liquid Retina IPS LCD</li>
-            <li><strong>Chipset:</strong> Apple A12 Bionic</li>
-            <li><strong>Storage:</strong> 64 / 128 / 256 GB</li>
-            <li><strong>Battery:</strong> around 2942 mAh</li>
-            <li><strong>Cameras:</strong> Single 12 MP rear camera</li>
+            <li><strong>Display:</strong> 6.1″ Liquid Retina LCD</li>
+            <li><strong>Chip:</strong> Apple A12 Bionic</li>
+            <li><strong>Storage:</strong> 64–256 GB</li>
+            <li><strong>Battery:</strong> ~2942 mAh</li>
+            <li><strong>Release year:</strong> 2018</li>
           </ul>
-        </div>
+        </section>
 
-        <div>
-          <!-- Put your real image if you have one -->
-          <img src="../images/my-fix-iphonexr.jpg" alt="iPhone XR repair" class="phone-img" />
-          <p class="about-text">
-            I use this phone as a training device for practising opening and
-            connector handling.
-          </p>
-        </div>
-      </div>
+        <section class="phone-section-card">
+          <h2>🧠 Inside the iPhone XR</h2>
+          <ul>
+            <li>Logic board on one side, battery on the other.</li>
+            <li>LCD display assembly with Face ID and earpiece at the top.</li>
+            <li>Single rear camera module, simple to remove and reconnect.</li>
+            <li>Taptic Engine and loudspeaker assembly along the bottom edge.</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>🧠 Inside the iPhone XR</h2>
-        <p>
-          The layout is similar to the iPhone 11 but with a simpler camera system:
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Practice notes</h2>
+          <ol>
+            <li>Open the phone carefully with heat and a suction cup, avoiding damage to the LCD.</li>
+            <li>Disconnect the battery before disconnecting the display or other parts.</li>
+            <li>Use this phone to practise removing the battery and re‑installing it safely.</li>
+            <li>Check that it still boots, charges and shows no lines or flicker on the display.</li>
+          </ol>
+        </section>
+
+        <section class="phone-section-card phone-links">
+          <h2>🔗 Sources &amp; references</h2>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/IPhone_XR" target="_blank">iPhone XR — Wikipedia</a></li>
+            <li><a href="https://www.ifixit.com/Device/iPhone_XR" target="_blank">iPhone XR guides — iFixit</a></li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
         </p>
-        <ul>
-          <li>Stacked logic board on one side.</li>
-          <li>Large single‑cell battery filling most of the body.</li>
-          <li>Face ID hardware along the top with the front camera.</li>
-          <li>Bottom speaker, Taptic Engine and Lightning port assembly.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🔧 Practice notes</h2>
-        <p>Things I focus on while using the XR for learning:</p>
-        <ul>
-          <li>Opening without pushing tools too far into the frame.</li>
-          <li>Remembering the correct screw types and positions.</li>
-          <li>Removing the battery using pull‑tabs instead of prying too hard.</li>
-          <li>Keeping track of brackets and small metal shields.</li>
-          <li>Re‑assembling and checking for lines or colour issues on the LCD.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>🔗 Sources & references</h2>
-        <ul>
-          <li>
-            <a href="https://en.wikipedia.org/wiki/IPhone_XR" target="_blank">
-              iPhone XR — Wikipedia
-            </a>
-          </li>
-          <li>
-            <a href="https://support.apple.com/iphone" target="_blank">
-              Apple iPhone support
-            </a>
-          </li>
-          <li>
-            <a href="https://www.ifixit.com/Teardown/iPhone+XR+Teardown/113165" target="_blank">
-              iPhone XR teardown — iFixit
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <p class="back-link">
-        <a href="../phones.html">← Back to all phones</a>
-      </p>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -111,33 +120,27 @@
   </footer>
 
   <script>
+    window.addEventListener("load", () => { window.scrollTo(0, 0); });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      if (toggle) toggle.querySelector(".theme-toggle-icon").textContent =
+        theme === "dark" ? "🎮" : "🌞";
+    }
     if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-
-      function setTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
-      }
-
       const saved = localStorage.getItem("theme");
-      if (saved) {
-        setTheme(saved);
-      } else {
+      if (saved) setTheme(saved); else {
         const prefersDark =
           window.matchMedia &&
           window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDark ? "dark" : "light");
       }
-
       toggle.addEventListener("click", () => {
-        const current =
-          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
