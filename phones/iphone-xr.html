@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <title>iPhone XR – Repair log | Mohammed</title>
@@ -22,7 +22,7 @@
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🎮</span>
+      <span class="theme-toggle-icon">🌞</span>
     </button>
   </header>
 
@@ -37,33 +37,37 @@
             <h1>iPhone XR</h1>
             <div class="phone-meta-bar">
               <span class="phone-chip-main">iOS · 2018</span>
-              <span class="phone-chip-main phone-chip-highlight">Single camera · LCD</span>
+              <span class="phone-chip-main phone-chip-highlight">LCD · Single camera</span>
             </div>
           </div>
           <div class="phone-status-stack">
             <span class="status-label">Repair status</span>
-            <span class="status-pill status-success">Learning</span>
+            <span class="status-pill status-learning">Learning / practice</span>
           </div>
         </header>
 
         <div class="phone-detail-top">
           <div class="phone-intro">
             <p>
-              Great practice device: LCD display, simple single camera and cheaper parts.
-              I use this phone mainly for safe opening and connector practice.
+              The XR is a simpler iPhone with one rear camera and an LCD screen.
+              Perfect for learning safe opening, battery removal and connector
+              handling without stressing about expensive OLED.
             </p>
             <div class="spec-pills">
               <span class="spec-pill">6.1″ LCD</span>
               <span class="spec-pill">A12 Bionic</span>
-              <span class="spec-pill">Single rear camera</span>
+              <span class="spec-pill">Single camera</span>
               <span class="spec-pill">Face ID</span>
             </div>
           </div>
 
           <figure class="phone-image-card">
-            <!-- change if you add an XR image -->
-            <img src="../images/iphone-xr.jpg" alt="iPhone XR repair" class="phone-img" />
-            <figcaption>Used for learning safe disassembly and re‑assembly.</figcaption>
+            <img
+              src="../images/iphone-xr.jpg"
+              alt="iPhone XR repair photo"
+              class="phone-img"
+            />
+            <figcaption>Practice phone for safe opening and battery work.</figcaption>
           </figure>
         </div>
 
@@ -76,27 +80,30 @@
             <li><strong>Chip:</strong> Apple A12 Bionic</li>
             <li><strong>Storage:</strong> 64–256 GB</li>
             <li><strong>Battery:</strong> ~2942 mAh</li>
-            <li><strong>Release year:</strong> 2018</li>
+            <li><strong>Cameras:</strong> Single 12 MP wide rear camera</li>
           </ul>
         </section>
 
         <section class="phone-section-card">
           <h2>🧠 Inside the iPhone XR</h2>
+          <p>What I pay attention to:</p>
           <ul>
             <li>Logic board on one side, battery on the other.</li>
-            <li>LCD display assembly with Face ID and earpiece at the top.</li>
-            <li>Single rear camera module, simple to remove and reconnect.</li>
-            <li>Taptic Engine and loudspeaker assembly along the bottom edge.</li>
+            <li>Single rear camera, less crowded than dual / triple setups.</li>
+            <li>Display cables near the right side when opening like a book.</li>
+            <li>Battery pull‑tabs that can snap if pulled too high or too fast.</li>
           </ul>
         </section>
 
         <section class="phone-section-card phone-process">
           <h2>🔧 Practice notes</h2>
+          <p>Good training routine:</p>
           <ol>
-            <li>Open the phone carefully with heat and a suction cup, avoiding damage to the LCD.</li>
-            <li>Disconnect the battery before disconnecting the display or other parts.</li>
-            <li>Use this phone to practise removing the battery and re‑installing it safely.</li>
-            <li>Check that it still boots, charges and shows no lines or flicker on the display.</li>
+            <li>Open slowly with heat, watching how the adhesive stretches.</li>
+            <li>Disconnect the battery before any other connector.</li>
+            <li>Remove the battery using pull‑tabs without bending or stabbing the cell.</li>
+            <li>Re‑fit a new battery and route the tabs correctly.</li>
+            <li>Test boot, Face ID, audio and display for lines or flicker.</li>
           </ol>
         </section>
 
@@ -104,7 +111,7 @@
           <h2>🔗 Sources &amp; references</h2>
           <ul>
             <li><a href="https://en.wikipedia.org/wiki/IPhone_XR" target="_blank">iPhone XR — Wikipedia</a></li>
-            <li><a href="https://www.ifixit.com/Device/iPhone_XR" target="_blank">iPhone XR guides — iFixit</a></li>
+            <li><a href="https://www.ifixit.com/Device/iPhone_XR" target="_blank">iFixit guides</a></li>
           </ul>
         </section>
 
@@ -120,30 +127,49 @@
   </footer>
 
   <script>
-    window.addEventListener("load", () => { window.scrollTo(0, 0); });
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
-    function setTheme(theme) {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      if (toggle) toggle.querySelector(".theme-toggle-icon").textContent =
-        theme === "dark" ? "🎮" : "🌞";
-    }
     if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
       const saved = localStorage.getItem("theme");
-      if (saved) setTheme(saved); else {
+      if (saved) {
+        setTheme(saved);
+      } else {
         const prefersDark =
           window.matchMedia &&
           window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDark ? "dark" : "light");
       }
       toggle.addEventListener("click", () => {
-        const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
         setTheme(current === "dark" ? "light" : "dark");
       });
     }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
