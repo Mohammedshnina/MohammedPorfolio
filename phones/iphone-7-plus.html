@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 7 Plus – Repair log | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
+
+      <div class="phone-detail-inner">
+
+        <!-- HEADER -->
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 7 Plus</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2016</span>
+              <span class="phone-chip-main phone-chip-highlight">Dual camera · First big repair</span>
+            </div>
+          </div>
+
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-success">Charging port success ✓</span>
+          </div>
+        </header>
+
+        <!-- TOP GRID -->
+        <div class="phone-detail-top">
+          <div class="phone-intro">
+            <p>
+              The iPhone 7 Plus is one of my main training phones. It was my first
+              “proper” repair where I swapped the charging port, and I’m planning a
+              battery replacement next. It’s old enough to experiment on, but still
+              modern enough to teach real repair skills.
+            </p>
+
+            <div class="spec-pills">
+              <span class="spec-pill">5.5″ Retina LCD</span>
+              <span class="spec-pill">Apple A10 Fusion</span>
+              <span class="spec-pill">Dual 12 MP cameras</span>
+              <span class="spec-pill">IP67 water resistance</span>
+            </div>
+          </div>
+
+          <!-- Image card -->
+          <figure class="phone-image-card">
+            <img
+              src="../images/iphone-7-plus.jpg"
+              alt="iPhone 7 Plus repair photo"
+              class="phone-img"
+            />
+            <figcaption>
+              My 7 Plus during the charging port replacement.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <!-- SPECS SECTION -->
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
+          <ul>
+            <li><strong>Display:</strong> 5.5″ Retina IPS LCD, 1080p, 401ppi</li>
+            <li><strong>Chip:</strong> Apple A10 Fusion + M10 coprocessor</li>
+            <li><strong>Storage:</strong> 32 / 128 / 256 GB</li>
+            <li><strong>Battery:</strong> ~2900 mAh</li>
+            <li><strong>Cameras:</strong> 12 MP wide + 12 MP telephoto</li>
+            <li><strong>Other:</strong> IP67 water‑resistant, stereo speakers</li>
+          </ul>
+        </section>
+
+        <!-- INTERNAL LAYOUT -->
+        <section class="phone-section-card">
+          <h2>🧠 Inside the iPhone 7 Plus</h2>
+          <p>Things I focus on when opening or working on this model:</p>
+          <ul>
+            <li>Logic board and shields on the right side.</li>
+            <li>Large mid‑frame battery with pull‑tabs.</li>
+            <li>Charging port assembly with mics + antenna lines.</li>
+            <li>Dual rear camera system at the top.</li>
+            <li>Water‑resistant adhesive sealing the screen.</li>
+          </ul>
+        </section>
+
+        <!-- REPAIR NOTES -->
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Repair notes</h2>
+          <p>
+            This was one of my first “real” repairs. The charging port replacement
+            taught me screw discipline and how to track small parts.
+          </p>
+
+          <ol>
+            <li>Removed pentalobe screws + heated the sides.</li>
+            <li>Opened display sideways (careful with cables).</li>
+            <li>Disconnected battery first, then removed bottom shields.</li>
+            <li>Lifted old charging assembly + installed new one.</li>
+            <li>Reconnected everything + tested charging and audio.</li>
+          </ol>
+
+          <p><strong>Next repair:</strong> battery replacement (good pull‑tab practice).</p>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
