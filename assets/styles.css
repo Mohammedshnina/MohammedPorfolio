@@ -1022,3 +1022,201 @@ nav a:hover::after {
   50%  { transform: translateY(8%); }
   100% { transform: translateY(-6%); }
 }
+
+
+/* =========================================================
+   MOBILE TWEAKS
+   ========================================================= */
+
+/* Tablets & small laptops */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .navbar nav a {
+    margin-left: 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 56px 16px 32px;
+  }
+
+  .section {
+    padding: 32px 16px 24px;
+  }
+
+  .phone-detail {
+    margin: 24px auto;
+    padding: 24px 16px;
+  }
+
+  .phone-detail-inner {
+    padding: 18px 16px 16px;
+  }
+
+  .phone-detail h1 {
+    font-size: 24px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  body {
+    background: radial-gradient(circle at top, var(--bg-start), var(--bg-mid));
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .theme-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .theme-toggle-label {
+    display: none; /* keep only the icon on very small screens */
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-card {
+    margin-top: 8px;
+    padding: 16px 14px 14px;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    padding: 14px 14px 12px;
+  }
+
+  .phones-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .phone-card {
+    padding: 14px 14px 10px;
+  }
+
+  .phone-name {
+    font-size: 16px;
+  }
+
+  .phone-summary {
+    font-size: 13px;
+  }
+
+  .phone-detail {
+    padding: 18px 10px;
+    margin: 18px 0 24px;
+    box-shadow: none; /* reduce heavy shadow on small screens */
+  }
+
+  .phone-detail-inner {
+    padding: 16px 12px 14px;
+  }
+
+  .phone-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .phone-status-stack {
+    align-items: flex-start;
+  }
+
+  .phone-detail-top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .phone-image-card {
+    padding: 10px;
+  }
+
+  .phone-section-card {
+    margin-top: 12px;
+    padding: 12px 10px 10px;
+  }
+
+  .phone-section-card h2 {
+    font-size: 15px;
+  }
+
+  .phone-section-card p,
+  .phone-section-card li {
+    font-size: 13px;
+  }
+
+  .footer {
+    padding: 14px;
+    font-size: 11px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+  .navbar {
+    padding-inline: 10px;
+  }
+
+  nav {
+    gap: 4px 8px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-text {
+    font-size: 13px;
+  }
+
+  .phones-hero .section-title {
+    font-size: 20px;
+  }
+}
+
+
