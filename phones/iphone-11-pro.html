@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 11 Pro – Repair log | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
+
+      <div class="phone-detail-inner">
+
+        <!-- HEADER -->
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 11 Pro</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2019</span>
+              <span class="phone-chip-main phone-chip-highlight">Triple camera · OLED</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-learning">No repairs yet</span>
+          </div>
+        </header>
+
+        <!-- TOP GRID -->
+        <div class="phone-detail-top">
+          <!-- Intro -->
+          <div class="phone-intro">
+            <p>
+              This is my personal phone, so it’s on “do not touch yet” status.
+              I’m using older iPhones and broken devices to learn first, so when
+              I finally open the 11 Pro I don’t turn my daily phone into a brick.
+            </p>
+
+            <div class="spec-pills">
+              <span class="spec-pill">5.8″ OLED</span>
+              <span class="spec-pill">Apple A13 Bionic</span>
+              <span class="spec-pill">Triple 12 MP cameras</span>
+              <span class="spec-pill">IP68 water resistance</span>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <figure class="phone-image-card">
+            <img
+              src="../images/iphone-11-pro.jpg"
+              alt="iPhone 11 Pro home screen"
+              class="phone-img"
+            />
+            <figcaption>
+              My daily iPhone 11 Pro – zero repairs so far, just planning.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <!-- SPECS -->
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
+          <ul>
+            <li><strong>Display:</strong> 5.8″ Super Retina XDR OLED, 2436×1125</li>
+            <li><strong>Chip:</strong> Apple A13 Bionic</li>
+            <li><strong>Storage:</strong> 64 / 256 / 512 GB (varies)</li>
+            <li><strong>Battery:</strong> ~3046 mAh</li>
+            <li><strong>Cameras:</strong> 12 MP wide + ultra‑wide + telephoto</li>
+            <li><strong>Other:</strong> Face ID, IP68 water resistance, fast charging</li>
+          </ul>
+        </section>
+
+        <!-- PLAN SECTION -->
+        <section class="phone-section-card phone-process">
+          <h2>🧠 Future repair plans</h2>
+          <p>
+            I haven’t opened this phone yet on purpose. I want to be confident
+            on older models so when I finally work on the 11 Pro, I do it right.
+          </p>
+          <ol>
+            <li>Keep practising on phones like the 6s, 7, 7 Plus and XR.</li>
+            <li>Learn screen and battery swaps on cheaper or broken devices.</li>
+            <li>Study the 11 Pro internals using guides and teardown videos.</li>
+            <li>
+              Only attempt a repair (like battery or screen) when I can do it
+              calmly without guessing.
+            </li>
+          </ol>
+        </section>
+
+        <!-- WHY IT MATTERS -->
+        <section class="phone-section-card">
+          <h2>🎮 Why I’m not rushing this repair</h2>
+          <p>
+            This phone is where I practise <strong>patience</strong>, not just tools.
+          </p>
+          <ul>
+            <li>Reminds me to start on cheap or broken phones first.</li>
+            <li>Gives me a clear “goal device” to work towards.</li>
+            <li>Shows the difference between practice devices and real daily phones.</li>
+            <li>Makes every practice repair feel like progress towards this one.</li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
