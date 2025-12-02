@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 7 – Repair log | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
+
+      <div class="phone-detail-inner">
+
+        <!-- HEADER -->
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 7</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2016</span>
+              <span class="phone-chip-main phone-chip-highlight">Bent frame · Practice only</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-learning">Experiment / practice</span>
+          </div>
+        </header>
+
+        <!-- TOP GRID -->
+        <div class="phone-detail-top">
+          <!-- Intro -->
+          <div class="phone-intro">
+            <p>
+              This iPhone 7 is basically bent like a Z Fold. It’s not here to be
+              “saved” – it’s my playground phone. I open it, mess with parts and
+              practise techniques without worrying if it survives.
+            </p>
+
+            <div class="spec-pills">
+              <span class="spec-pill">4.7″ Retina LCD</span>
+              <span class="spec-pill">Apple A10 Fusion</span>
+              <span class="spec-pill">Single 12 MP camera</span>
+              <span class="spec-pill">IP67 water resistance</span>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <figure class="phone-image-card">
+            <img
+              src="../images/iphone-7-bent.jpg"
+              alt="Bent iPhone 7 practice phone"
+              class="phone-img"
+            />
+            <figcaption>
+              My bent iPhone 7 – perfect for “what happens if I…” experiments.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <!-- SPECS -->
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
+          <ul>
+            <li><strong>Display:</strong> 4.7″ Retina IPS LCD, 1334×750</li>
+            <li><strong>Chip:</strong> Apple A10 Fusion, M10 motion coprocessor</li>
+            <li><strong>Storage:</strong> 32 / 128 / 256 GB (varies)</li>
+            <li><strong>Battery:</strong> ~1960 mAh</li>
+            <li><strong>Cameras:</strong> 12 MP rear, 7 MP front</li>
+            <li><strong>Other:</strong> First IP‑rated iPhone, no headphone jack</li>
+          </ul>
+        </section>
+
+        <!-- INSIDE 7 -->
+        <section class="phone-section-card">
+          <h2>🧠 Inside the iPhone 7</h2>
+          <p>Stuff I pay attention to even on a “sacrificial” phone:</p>
+          <ul>
+            <li>
+              <strong>Bent frame:</strong> shows how much stress the board, screen
+              and battery go through when a phone is warped.
+            </li>
+            <li>
+              <strong>Display cables:</strong> good reminder to open the phone from
+              the correct side and not rip flex cables.
+            </li>
+            <li>
+              <strong>Water seals:</strong> you can clearly see how the foam gasket
+              is crushed and broken after multiple openings.
+            </li>
+            <li>
+              <strong>Connector layout:</strong> lets me practise unplugging and
+              re‑plugging connectors without fear.
+            </li>
+          </ul>
+        </section>
+
+        <!-- PRACTICE NOTES -->
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Practice notes</h2>
+          <p>
+            I use this 7 to answer the question: “what happens if I do this
+            wrong?” so I don’t make the same mistake on good phones.
+          </p>
+          <ol>
+            <li>
+              Practised opening the phone multiple times, testing different amounts
+              of heat and prying to see what’s safe and what’s too much.
+            </li>
+            <li>
+              Repeatedly disconnected and reconnected display and battery
+              connectors to build muscle memory.
+            </li>
+            <li>
+              Looked at how the bent frame affects part alignment and screw fit.
+            </li>
+            <li>
+              Used it to remind myself why screw tracking matters – wrong screws in
+              wrong holes can hit the board.
+            </li>
+          </ol>
+        </section>
+
+        <!-- WHY IT'S USEFUL -->
+        <section class="phone-section-card">
+          <h2>🎮 Why this broken phone is still useful</h2>
+          <p>
+            Even though this iPhone 7 is basically cooked, it’s one of the most
+            useful devices in my repair journey.
+          </p>
+          <ul>
+            <li>Zero stress – if it dies, I just learned something.</li>
+            <li>Lets me test “don’t do this” scenarios safely.</li>
+            <li>Helps me build confidence before touching working phones.</li>
+            <li>Keeps my hands used to tiny screws and connectors.</li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
