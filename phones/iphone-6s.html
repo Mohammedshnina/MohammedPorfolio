@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 6s – Repair log | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
+
+      <div class="phone-detail-inner">
+
+        <!-- HEADER -->
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 6s</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2015</span>
+              <span class="phone-chip-main phone-chip-highlight">Practice teardown phone</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-learning">Practice / teardown</span>
+          </div>
+        </header>
+
+        <!-- TOP GRID -->
+        <div class="phone-detail-top">
+          <!-- Intro -->
+          <div class="phone-intro">
+            <p>
+              This iPhone 6s is my full teardown practice phone. I didn’t swap
+              any parts, I used it to learn where everything lives inside an
+              older iPhone and to get comfortable taking a whole device apart
+              without stressing about breaking something expensive.
+            </p>
+
+            <div class="spec-pills">
+              <span class="spec-pill">4.7″ Retina LCD</span>
+              <span class="spec-pill">Apple A9</span>
+              <span class="spec-pill">12 MP camera</span>
+              <span class="spec-pill">3D Touch era</span>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <figure class="phone-image-card">
+            <img
+              src="../images/iphone-6s.jpg"
+              alt="iPhone 6s teardown photo"
+              class="phone-img"
+            />
+            <figcaption>
+              iPhone 6s opened up during teardown – shields off, parts exposed.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <!-- SPECS -->
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
+          <ul>
+            <li><strong>Display:</strong> 4.7″ Retina IPS LCD, 1334×750</li>
+            <li><strong>Chip:</strong> Apple A9 with M9 motion coprocessor</li>
+            <li><strong>Storage:</strong> 16 / 32 / 64 / 128 GB (varies)</li>
+            <li><strong>Battery:</strong> ~1715 mAh (small by today’s standards)</li>
+            <li><strong>Cameras:</strong> 12 MP rear, 5 MP front</li>
+            <li><strong>Other:</strong> First iPhone with 3D Touch, Touch ID home button</li>
+          </ul>
+        </section>
+
+        <!-- INSIDE 6S -->
+        <section class="phone-section-card">
+          <h2>🧠 Inside the iPhone 6s</h2>
+          <p>What I looked at while tearing this phone down:</p>
+          <ul>
+            <li>
+              <strong>Logic board:</strong> compact board on the side with a ton
+              of tiny screws and brackets – perfect for practising screw
+              organisation.
+            </li>
+            <li>
+              <strong>Battery:</strong> long cell in the middle with adhesive
+              strips – good for learning how pull‑tabs behave.
+            </li>
+            <li>
+              <strong>Display assembly:</strong> LCD, front camera, earpiece and
+              home‑button flex all connected.
+            </li>
+            <li>
+              <strong>Bottom section:</strong> speaker, Taptic Engine and Lightning
+              port all packed together.
+            </li>
+            <li>
+              <strong>Cable routing:</strong> good example of how Apple routes
+              flex cables without sharp bends.
+            </li>
+          </ul>
+        </section>
+
+        <!-- TEARDOWN NOTES -->
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Teardown notes</h2>
+          <p>
+            I used this phone as a “no pressure” teardown to build confidence
+            before touching newer iPhones.
+          </p>
+          <ol>
+            <li>
+              Removed the pentalobe screws, warmed the edges slightly and
+              opened the screen from the side like a book.
+            </li>
+            <li>
+              Disconnected the battery first, then slowly removed shields and
+              flex cables one by one, keeping screws in groups.
+            </li>
+            <li>
+              Took out the battery, speaker, Taptic Engine and logic board to
+              see how everything fits together.
+            </li>
+            <li>
+              Re‑assembled the phone, following my own screw layout to check
+              if I kept track of everything correctly.
+            </li>
+          </ol>
+        </section>
+
+        <!-- WHY IT'S USEFUL -->
+        <section class="phone-section-card">
+          <h2>🎮 Why this phone is good for practice</h2>
+          <p>
+            The 6s is way less scary than modern phones, which makes it perfect
+            as a learning device.
+          </p>
+          <ul>
+            <li>Lets me practise full teardowns without risking an expensive phone.</li>
+            <li>Teaches screw order, bracket placement and cable routing.</li>
+            <li>Helps build habits I can reuse on newer iPhones.</li>
+            <li>Great for repeating open → teardown → re‑assemble cycles.</li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
