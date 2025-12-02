@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 14 Pro Max – Repair log | Mohammed</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="../index.html#hero">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../phones.html">Phones</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="phone-detail reveal">
+      <div class="phone-rail phone-rail-left"></div>
+      <div class="phone-rail phone-rail-right"></div>
+
+      <div class="phone-detail-inner">
+
+        <!-- HEADER -->
+        <header class="phone-detail-header">
+          <div>
+            <h1>iPhone 14 Pro Max</h1>
+            <div class="phone-meta-bar">
+              <span class="phone-chip-main">iOS · 2022</span>
+              <span class="phone-chip-main phone-chip-highlight">Dynamic Island · Pro series</span>
+            </div>
+          </div>
+          <div class="phone-status-stack">
+            <span class="status-label">Repair status</span>
+            <span class="status-pill status-learning">No repairs (Dad’s phone)</span>
+          </div>
+        </header>
+
+        <!-- TOP GRID -->
+        <div class="phone-detail-top">
+          <!-- Intro -->
+          <div class="phone-intro">
+            <p>
+              This is my dad’s phone, so it’s strictly “do not experiment” for now.
+              It’s one of the most advanced iPhones I’m around every day, and it’s
+              a big motivation to keep improving my repair skills until I’m good
+              enough to safely work on something this expensive.
+            </p>
+
+            <div class="spec-pills">
+              <span class="spec-pill">6.7″ OLED</span>
+              <span class="spec-pill">Apple A16 Bionic</span>
+              <span class="spec-pill">48 MP main camera</span>
+              <span class="spec-pill">Dynamic Island</span>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <figure class="phone-image-card">
+            <img
+              src="../images/iphone-14-pro-max.jpg"
+              alt="iPhone 14 Pro Max lock screen"
+              class="phone-img"
+            />
+            <figcaption>
+              My dad’s iPhone 14 Pro Max – future repair goal, not a practice phone.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="glow-divider"></div>
+
+        <!-- SPECS -->
+        <section class="phone-section-card">
+          <h2>📦 Key specs</h2>
+          <ul>
+            <li><strong>Display:</strong> 6.7″ LTPO Super Retina XDR OLED, up to 120 Hz</li>
+            <li><strong>Chip:</strong> Apple A16 Bionic</li>
+            <li><strong>Storage:</strong> 128 / 256 / 512 GB / 1 TB (varies)</li>
+            <li><strong>Battery:</strong> Large all‑day battery (varies by model)</li>
+            <li><strong>Cameras:</strong> 48 MP main + ultra‑wide + telephoto</li>
+            <li><strong>Other:</strong> Dynamic Island, Always‑On display, IP68, MagSafe</li>
+          </ul>
+        </section>
+
+        <!-- WHY IT'S DIFFERENT -->
+        <section class="phone-section-card">
+          <h2>🧠 Why this phone is a higher level</h2>
+          <p>
+            Compared to older iPhones I practise on, this one is way more risky
+            to open. Mistakes are more expensive, and parts are more complex.
+          </p>
+          <ul>
+            <li>High‑density flex cables and more sensors near the display.</li>
+            <li>More expensive OLED screen – breaking it would hurt.</li>
+            <li>Stronger water‑resistant seals that need careful opening.</li>
+            <li>More cameras and sensors to accidentally damage.</li>
+          </ul>
+        </section>
+
+        <!-- FUTURE PLAN -->
+        <section class="phone-section-card phone-process">
+          <h2>🔧 Future repair goal</h2>
+          <p>
+            I haven’t repaired this phone and I’m not planning to touch it until
+            I’m very confident. But I already know how I’d approach it one day:
+          </p>
+          <ol>
+            <li>Only attempt a repair if there’s a real problem and we agree on it.</li>
+            <li>Study multiple teardown and repair guides for this exact model.</li>
+            <li>Practise similar repairs on older iPhones first (like XR / 11 Pro).</li>
+            <li>
+              Prepare tools, parts and backups before even removing the first
+              screw.
+            </li>
+          </ol>
+        </section>
+
+        <!-- MOTIVATION -->
+        <section class="phone-section-card">
+          <h2>🎮 Why this phone motivates me</h2>
+          <p>
+            This isn’t just a device, it’s kind of a “final boss” in my repair
+            journey right now.
+          </p>
+          <ul>
+            <li>Makes me take repair skills seriously, not just as random tinkering.</li>
+            <li>Gives me a clear long‑term goal: safely repair modern flagships.</li>
+            <li>Pushes me to learn from cheap phones before touching premium ones.</li>
+            <li>Reminds me that not every device should be used as practice.</li>
+          </ul>
+        </section>
+
+        <p class="back-link">
+          <a href="../phones.html">← Back to all phones</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
