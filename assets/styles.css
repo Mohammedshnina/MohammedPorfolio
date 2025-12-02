@@ -1220,3 +1220,17 @@ nav a:hover::after {
 }
 
 
+/* Fix for portrait mode showing full zoomed-out page */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    transform: none !important;
+    zoom: 1 !important;
+  }
+
+  * {
+    transform-origin: center !important;
+  }
+}
+
