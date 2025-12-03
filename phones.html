@@ -2,9 +2,8 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <!-- IMPORTANT: this fixes the zoom on phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phones I've Repaired | Mohammed</title>
+  <title>Phones & iPhone Lineups | Mohammed</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <script>
     if ("scrollRestoration" in history) {
@@ -13,6 +12,7 @@
   </script>
 </head>
 <body>
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">Mohammed</div>
     <nav>
@@ -29,161 +29,69 @@
   </header>
 
   <main>
-    <!-- Header section -->
-    <section class="phones-hero section reveal">
-      <h1 class="section-title">Phones I’ve Worked On</h1>
+    <!-- PAGE INTRO -->
+    <section class="section reveal">
+      <h1 class="section-title">Phones I&apos;ve worked with</h1>
       <p class="section-subtitle">
-        A little gallery of the phones I’ve opened, fixed, and experimented on.
-        Green = full success, yellow = still learning or practice device.
+        A collection of the phones I&apos;ve repaired, experimented on and learned from –
+        plus some high-end devices I&apos;m working towards.
       </p>
-
-      <div class="phones-legend">
-        <span>
-          <span class="legend-dot success"></span>
-          Success
-        </span>
-        <span>
-          <span class="legend-dot learning"></span>
-          Learning / practice
-        </span>
-      </div>
     </section>
 
-    <div class="phones-grid">
-
-  <!-- Galaxy S10 -->
-  <article class="phone-card">
-    <a href="phones/galaxy-s10.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">Samsung Galaxy S10</h2>
-          <p class="phone-meta">2019 · Android · Infinity‑O AMOLED</p>
-        </div>
-        <span class="phone-status-pill success">Success ✓</span>
-      </div>
-      <p class="phone-summary">
-        Curved AMOLED, in‑screen fingerprint and triple cameras. One of my
-        favourite flagships to work on.
+    <!-- PHONES GRID -->
+    <section class="section reveal" id="phones-list">
+      <h2 class="section-title">My phone collection</h2>
+      <p class="section-subtitle">
+        Each card links to a detailed page with repair notes, specs and what I learned.
       </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Screen / charging</span>
-        <span class="phone-chip">Back glass opening</span>
-        <span class="phone-chip">Battery handling</span>
-      </div>
-    </a>
-  </article>
 
-  <!-- iPhone 11 -->
-  <article class="phone-card">
-    <a href="phones/iphone-11.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">iPhone 11</h2>
-          <p class="phone-meta">2019 · iOS · Dual camera</p>
-        </div>
-        <span class="phone-status-pill success">Success ✓</span>
-      </div>
-      <p class="phone-summary">
-        Great training phone for modern iPhone repairs – Face ID, dual cameras
-        and water sealing but still using LCD.
-      </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Screen replacement</span>
-        <span class="phone-chip">Face ID safety</span>
-        <span class="phone-chip">Water seal practice</span>
-      </div>
-    </a>
-  </article>
+      <div class="phones-grid">
 
-  <!-- iPhone XR -->
-  <article class="phone-card">
-    <a href="phones/iphone-xr.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">iPhone XR</h2>
-          <p class="phone-meta">2018 · iOS · Single camera</p>
-        </div>
-        <span class="phone-status-pill success">Success ✓</span>
-      </div>
-      <p class="phone-summary">
-        Screen swap and camera glass replacement. My first “real” iPhone repair
-        that actually worked.
-      </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Screen replacement</span>
-        <span class="phone-chip">Camera glass</span>
-        <span class="phone-chip">Adhesive practice</span>
-      </div>
-    </a>
-  </article>
+        <!-- Samsung Galaxy S10 -->
+        <article class="phone-card">
+          <a href="phones/galaxy-s10.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">Samsung Galaxy S10</h2>
+                <p class="phone-meta">2019 · Android · AMOLED</p>
+              </div>
+              <span class="phone-status-pill success">Success ✓</span>
+            </div>
+            <p class="phone-summary">
+              Curved AMOLED, in‑screen fingerprint sensor and triple cameras.
+              One of the cleanest Android repairs to train on.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Screen</span>
+              <span class="phone-chip">Battery</span>
+              <span class="phone-chip">Back glass</span>
+            </div>
+          </a>
+        </article>
 
-  <!-- iPhone 7 Plus -->
-  <article class="phone-card">
-    <a href="phones/iphone-7-plus.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">iPhone 7 Plus</h2>
-          <p class="phone-meta">2016 · iOS · Dual camera</p>
-        </div>
-        <span class="phone-status-pill success">Success ✓</span>
-      </div>
-      <p class="phone-summary">
-        Charging port replacement done, battery swap planned. Great training
-        phone for screw order and water‑seal breaks.
-      </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Charging port</span>
-        <span class="phone-chip">Future battery swap</span>
-        <span class="phone-chip">Water seal practice</span>
-      </div>
-    </a>
-  </article>
+        <!-- iPhone 11 -->
+        <article class="phone-card">
+          <a href="phones/iphone-11.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">iPhone 11</h2>
+                <p class="phone-meta">2019 · iOS · Dual camera</p>
+              </div>
+              <span class="phone-status-pill success">Success ✓</span>
+            </div>
+            <p class="phone-summary">
+              Great training phone: LCD panel, dual cameras, Face ID components
+              and solid internal layout.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Screen</span>
+              <span class="phone-chip">Water seal</span>
+              <span class="phone-chip">Face ID safe</span>
+            </div>
+          </a>
+        </article>
 
-  <!-- iPhone 6s -->
-  <article class="phone-card">
-    <a href="phones/iphone-6s.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">iPhone 6s</h2>
-          <p class="phone-meta">2015 · iOS · Practice teardown</p>
-        </div>
-        <span class="phone-status-pill learning">Practice</span>
-      </div>
-      <p class="phone-summary">
-        My teardown phone. I took it apart to learn the layout and get more
-        confident before working on newer iPhones.
-      </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Full teardown</span>
-        <span class="phone-chip">Layout learning</span>
-        <span class="phone-chip">Screw discipline</span>
-      </div>
-    </a>
-  </article>
-
-  <!-- iPhone 7 (bent) -->
-  <article class="phone-card">
-    <a href="phones/iphone-7.html">
-      <div class="phone-header">
-        <div>
-          <h2 class="phone-name">iPhone 7</h2>
-          <p class="phone-meta">2016 · iOS · Bent practice phone</p>
-        </div>
-        <span class="phone-status-pill learning">Practice</span>
-      </div>
-      <p class="phone-summary">
-        This 7 is basically bent like a Z Fold. I use it as a no‑stress practice
-        phone to open, close and mess with parts.
-      </p>
-      <div class="phone-chip-row">
-        <span class="phone-chip">Frame damage</span>
-        <span class="phone-chip">Safe opening practice</span>
-        <span class="phone-chip">Connector training</span>
-      </div>
-    </a>
-  </article>
-
-              <!-- iPhone 11 Pro -->
+        <!-- iPhone 11 Pro -->
         <article class="phone-card">
           <a href="phones/iphone-11-pro.html">
             <div class="phone-header">
@@ -191,16 +99,104 @@
                 <h2 class="phone-name">iPhone 11 Pro</h2>
                 <p class="phone-meta">2019 · iOS · Triple camera</p>
               </div>
-              <span class="phone-status-pill learning">Learning</span>
+              <span class="phone-status-pill personal">My phone</span>
             </div>
             <p class="phone-summary">
-              My personal phone. I’m practising on older devices first before I
-              even think about opening this one.
+              My personal phone. No repairs yet – I&apos;m practising on older devices
+              before I even think about opening this one.
             </p>
             <div class="phone-chip-row">
+              <span class="phone-chip">OLED</span>
+              <span class="phone-chip">Face ID</span>
               <span class="phone-chip">Daily driver</span>
-              <span class="phone-chip">No repairs yet</span>
-              <span class="phone-chip">Future goal</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- iPhone XR -->
+        <article class="phone-card">
+          <a href="phones/iphone-xr.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">iPhone XR</h2>
+                <p class="phone-meta">2018 · iOS · Single camera</p>
+              </div>
+              <span class="phone-status-pill success">Success ✓</span>
+            </div>
+            <p class="phone-summary">
+              Screen swap and camera glass replacement – my first &quot;real&quot; iPhone
+              repair that actually worked.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Screen</span>
+              <span class="phone-chip">Camera glass</span>
+              <span class="phone-chip">Adhesive</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- iPhone 7 Plus -->
+        <article class="phone-card">
+          <a href="phones/iphone-7-plus.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">iPhone 7 Plus</h2>
+                <p class="phone-meta">2016 · iOS · Dual camera</p>
+              </div>
+              <span class="phone-status-pill success">Success ✓</span>
+            </div>
+            <p class="phone-summary">
+              Charging port replacement completed. Battery replacement planned.
+              Great training phone for screw order and water‑seal breaks.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Charging port</span>
+              <span class="phone-chip">Battery soon</span>
+              <span class="phone-chip">Water‑seal</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- iPhone 7 -->
+        <article class="phone-card">
+          <a href="phones/iphone-7.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">iPhone 7</h2>
+                <p class="phone-meta">2016 · iOS · Bent practice phone</p>
+              </div>
+              <span class="phone-status-pill learning">Practice</span>
+            </div>
+            <p class="phone-summary">
+              This 7 is basically bent like a Z Fold. Perfect for no‑stress
+              opening, closing and connector practice.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Frame damage</span>
+              <span class="phone-chip">Practice only</span>
+              <span class="phone-chip">Safe experiments</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- iPhone 6s -->
+        <article class="phone-card">
+          <a href="phones/iphone-6s.html">
+            <div class="phone-header">
+              <div>
+                <h2 class="phone-name">iPhone 6s</h2>
+                <p class="phone-meta">2015 · iOS · Teardown phone</p>
+              </div>
+              <span class="phone-status-pill learning">Practice</span>
+            </div>
+            <p class="phone-summary">
+              My teardown phone. I took it apart to learn the layout and get more
+              confident before working on newer iPhones.
+            </p>
+            <div class="phone-chip-row">
+              <span class="phone-chip">Teardown</span>
+              <span class="phone-chip">Layout</span>
+              <span class="phone-chip">Screw discipline</span>
             </div>
           </a>
         </article>
@@ -213,21 +209,181 @@
                 <h2 class="phone-name">iPhone 14 Pro Max</h2>
                 <p class="phone-meta">2022 · iOS · Dynamic Island</p>
               </div>
-              <span class="phone-status-pill learning">Learning</span>
+              <span class="phone-status-pill personal">Dad&apos;s phone</span>
             </div>
             <p class="phone-summary">
-              My dad’s phone. Too expensive to experiment on right now, but it’s
-              on my repair wishlist once I’m confident enough.
+              Modern flagship. Too expensive to experiment on right now, but
+              definitely on my repair wishlist.
             </p>
             <div class="phone-chip-row">
-              <span class="phone-chip">High-end</span>
-              <span class="phone-chip">No repairs yet</span>
-              <span class="phone-chip">Future project</span>
+              <span class="phone-chip">OLED</span>
+              <span class="phone-chip">Dynamic Island</span>
+              <span class="phone-chip">Triple camera</span>
             </div>
           </a>
         </article>
 
-      
+      </div>
+    </section>
+
+    <!-- IPHONE LINEUP GRID -->
+    <section class="section iphone-lineup reveal" id="iphone-lineup">
+      <h2 class="section-title">All iPhone lineups</h2>
+      <p class="section-subtitle">
+        Quick overview of every main iPhone generation, from the original iPhone
+        all the way to future models I want to learn on.
+      </p>
+
+      <div class="iphone-lineup-grid">
+
+        <!-- 1: Original + 3G era -->
+        <article class="iphone-lineup-card">
+          <h3>OG &amp; 3G era</h3>
+          <p class="era-years">2007 – 2009</p>
+          <ul>
+            <li>iPhone (1st gen)</li>
+            <li>iPhone 3G</li>
+            <li>iPhone 3GS</li>
+          </ul>
+        </article>
+
+        <!-- 2: iPhone 4 / 4s -->
+        <article class="iphone-lineup-card">
+          <h3>Glass &amp; steel era</h3>
+          <p class="era-years">2010 – 2011</p>
+          <ul>
+            <li>iPhone 4</li>
+            <li>iPhone 4s</li>
+          </ul>
+        </article>
+
+        <!-- 3: iPhone 5 family -->
+        <article class="iphone-lineup-card">
+          <h3>5 / 5c / 5s</h3>
+          <p class="era-years">2012 – 2013</p>
+          <ul>
+            <li>iPhone 5</li>
+            <li>iPhone 5c</li>
+            <li>iPhone 5s</li>
+          </ul>
+        </article>
+
+        <!-- 4: 6 / 6s family -->
+        <article class="iphone-lineup-card">
+          <h3>6 / 6 Plus / 6s</h3>
+          <p class="era-years">2014 – 2015</p>
+          <ul>
+            <li>iPhone 6</li>
+            <li>iPhone 6 Plus</li>
+            <li>iPhone 6s</li>
+            <li>iPhone 6s Plus</li>
+          </ul>
+        </article>
+
+        <!-- 5: 7 family -->
+        <article class="iphone-lineup-card">
+          <h3>7 &amp; 7 Plus</h3>
+          <p class="era-years">2016</p>
+          <ul>
+            <li>iPhone 7</li>
+            <li>iPhone 7 Plus</li>
+          </ul>
+        </article>
+
+        <!-- 6: 8 / X era -->
+        <article class="iphone-lineup-card">
+          <h3>8 / X generation</h3>
+          <p class="era-years">2017</p>
+          <ul>
+            <li>iPhone 8</li>
+            <li>iPhone 8 Plus</li>
+            <li>iPhone X</li>
+          </ul>
+        </article>
+
+        <!-- 7: XR / XS -->
+        <article class="iphone-lineup-card">
+          <h3>XR / XS lineup</h3>
+          <p class="era-years">2018</p>
+          <ul>
+            <li>iPhone XR</li>
+            <li>iPhone XS</li>
+            <li>iPhone XS Max</li>
+          </ul>
+        </article>
+
+        <!-- 8: 11 series -->
+        <article class="iphone-lineup-card">
+          <h3>iPhone 11 series</h3>
+          <p class="era-years">2019</p>
+          <ul>
+            <li>iPhone 11</li>
+            <li>iPhone 11 Pro</li>
+            <li>iPhone 11 Pro Max</li>
+          </ul>
+        </article>
+
+        <!-- 9: SE (2nd gen) + 12 -->
+        <article class="iphone-lineup-card">
+          <h3>SE 2 &amp; 12 series</h3>
+          <p class="era-years">2020</p>
+          <ul>
+            <li>iPhone SE (2nd gen)</li>
+            <li>iPhone 12 mini</li>
+            <li>iPhone 12</li>
+            <li>iPhone 12 Pro</li>
+            <li>iPhone 12 Pro Max</li>
+          </ul>
+        </article>
+
+        <!-- 10: 13 series -->
+        <article class="iphone-lineup-card">
+          <h3>iPhone 13 series</h3>
+          <p class="era-years">2021</p>
+          <ul>
+            <li>iPhone 13 mini</li>
+            <li>iPhone 13</li>
+            <li>iPhone 13 Pro</li>
+            <li>iPhone 13 Pro Max</li>
+          </ul>
+        </article>
+
+        <!-- 11: SE (3rd gen) + 14 -->
+        <article class="iphone-lineup-card">
+          <h3>SE 3 &amp; 14 series</h3>
+          <p class="era-years">2022</p>
+          <ul>
+            <li>iPhone SE (3rd gen)</li>
+            <li>iPhone 14</li>
+            <li>iPhone 14 Plus</li>
+            <li>iPhone 14 Pro</li>
+            <li>iPhone 14 Pro Max</li>
+          </ul>
+        </article>
+
+        <!-- 12: 15 series -->
+        <article class="iphone-lineup-card">
+          <h3>iPhone 15 series</h3>
+          <p class="era-years">2023</p>
+          <ul>
+            <li>iPhone 15</li>
+            <li>iPhone 15 Plus</li>
+            <li>iPhone 15 Pro</li>
+            <li>iPhone 15 Pro Max</li>
+          </ul>
+        </article>
+
+        <!-- 13: future stuff -->
+        <article class="iphone-lineup-card lineup-future">
+          <h3>Future: 16 / 17 / Air</h3>
+          <p class="era-years">Wishlist / upcoming</p>
+          <ul>
+            <li>iPhone 16 lineup (future)</li>
+            <li>iPhone 17 lineup (future)</li>
+            <li>iPhone 17 Air (concept / dream)</li>
+          </ul>
+        </article>
+
       </div>
     </section>
   </main>
@@ -237,23 +393,27 @@
   </footer>
 
   <script>
+    // always start at top
     window.addEventListener("load", () => {
       window.scrollTo(0, 0);
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // year in footer
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
+    // theme toggle
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
     if (toggle) {
       const icon = toggle.querySelector(".theme-toggle-icon");
-
       function setTheme(theme) {
         root.setAttribute("data-theme", theme);
         localStorage.setItem("theme", theme);
-        icon.textContent = theme === "dark" ? "🎮" : "🌞";
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
       }
-
       const saved = localStorage.getItem("theme");
       if (saved) {
         setTheme(saved);
@@ -263,7 +423,6 @@
           window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDark ? "dark" : "light");
       }
-
       toggle.addEventListener("click", () => {
         const current =
           root.getAttribute("data-theme") === "dark" ? "dark" : "light";
@@ -271,6 +430,7 @@
       });
     }
 
+    // reveal on scroll
     const revealEls = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       entries => {
@@ -287,8 +447,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
