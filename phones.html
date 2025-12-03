@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Phones & iPhone Lineups | Mohammed</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <script>
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-  </script>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -22,15 +17,11 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="theme-toggle-label">Theme</span>
-      <span class="theme-toggle-icon">🌞</span>
-    </button>
   </header>
 
   <main>
     <!-- PAGE INTRO -->
-    <section class="section reveal">
+    <section class="section">
       <h1 class="section-title">Phones I&apos;ve worked with</h1>
       <p class="section-subtitle">
         A collection of the phones I&apos;ve repaired, experimented on and learned from –
@@ -39,7 +30,7 @@
     </section>
 
     <!-- PHONES GRID -->
-    <section class="section reveal" id="phones-list">
+    <section class="section" id="phones-list">
       <h2 class="section-title">My phone collection</h2>
       <p class="section-subtitle">
         Each card links to a detailed page with repair notes, specs and what I learned.
@@ -227,7 +218,7 @@
     </section>
 
     <!-- IPHONE LINEUP GRID -->
-    <section class="section iphone-lineup reveal" id="iphone-lineup">
+    <section class="section iphone-lineup" id="iphone-lineup">
       <h2 class="section-title">All iPhone lineups</h2>
       <p class="section-subtitle">
         Quick overview of every main iPhone generation, from the original iPhone
@@ -238,150 +229,188 @@
 
         <!-- 1: Original + 3G era -->
         <article class="iphone-lineup-card">
-          <h3>OG &amp; 3G era</h3>
-          <p class="era-years">2007 – 2009</p>
-          <ul>
-            <li>iPhone (1st gen)</li>
-            <li>iPhone 3G</li>
-            <li>iPhone 3GS</li>
-          </ul>
+          <a href="phones/iphone-og.html" class="iphone-lineup-link">
+            <h3>OG &amp; 3G era</h3>
+            <p class="era-years">2007 – 2009</p>
+            <ul>
+              <li>iPhone (1st gen)</li>
+              <li>iPhone 3G</li>
+              <li>iPhone 3GS</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 2: iPhone 4 / 4s -->
+        <!-- 2: iPhone 3G / 3GS focus -->
         <article class="iphone-lineup-card">
-          <h3>Glass &amp; steel era</h3>
-          <p class="era-years">2010 – 2011</p>
-          <ul>
-            <li>iPhone 4</li>
-            <li>iPhone 4s</li>
-          </ul>
+          <a href="phones/iphone-3g-3gs.html" class="iphone-lineup-link">
+            <h3>3G &amp; 3GS lineup</h3>
+            <p class="era-years">2008 – 2009</p>
+            <ul>
+              <li>iPhone 3G</li>
+              <li>iPhone 3GS</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 3: iPhone 5 family -->
+        <!-- 3: iPhone 4 family -->
         <article class="iphone-lineup-card">
-          <h3>5 / 5c / 5s</h3>
-          <p class="era-years">2012 – 2013</p>
-          <ul>
-            <li>iPhone 5</li>
-            <li>iPhone 5c</li>
-            <li>iPhone 5s</li>
-          </ul>
+          <a href="phones/iphone-4-4s.html" class="iphone-lineup-link">
+            <h3>Glass &amp; steel era</h3>
+            <p class="era-years">2010 – 2011</p>
+            <ul>
+              <li>iPhone 4</li>
+              <li>iPhone 4s</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 4: 6 / 6s family -->
+        <!-- 4: 5 / 5c / 5s -->
         <article class="iphone-lineup-card">
-          <h3>6 / 6 Plus / 6s</h3>
-          <p class="era-years">2014 – 2015</p>
-          <ul>
-            <li>iPhone 6</li>
-            <li>iPhone 6 Plus</li>
-            <li>iPhone 6s</li>
-            <li>iPhone 6s Plus</li>
-          </ul>
+          <a href="phones/iphone-5-family.html" class="iphone-lineup-link">
+            <h3>5 / 5c / 5s</h3>
+            <p class="era-years">2012 – 2013</p>
+            <ul>
+              <li>iPhone 5</li>
+              <li>iPhone 5c</li>
+              <li>iPhone 5s</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 5: 7 family -->
+        <!-- 5: 6 / 6s family -->
         <article class="iphone-lineup-card">
-          <h3>7 &amp; 7 Plus</h3>
-          <p class="era-years">2016</p>
-          <ul>
-            <li>iPhone 7</li>
-            <li>iPhone 7 Plus</li>
-          </ul>
+          <a href="phones/iphone-6-family.html" class="iphone-lineup-link">
+            <h3>6 / 6 Plus / 6s</h3>
+            <p class="era-years">2014 – 2015</p>
+            <ul>
+              <li>iPhone 6</li>
+              <li>iPhone 6 Plus</li>
+              <li>iPhone 6s</li>
+              <li>iPhone 6s Plus</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 6: 8 / X era -->
+        <!-- 6: 7 lineup -->
         <article class="iphone-lineup-card">
-          <h3>8 / X generation</h3>
-          <p class="era-years">2017</p>
-          <ul>
-            <li>iPhone 8</li>
-            <li>iPhone 8 Plus</li>
-            <li>iPhone X</li>
-          </ul>
+          <a href="phones/iphone-7-family.html" class="iphone-lineup-link">
+            <h3>7 &amp; 7 Plus</h3>
+            <p class="era-years">2016</p>
+            <ul>
+              <li>iPhone 7</li>
+              <li>iPhone 7 Plus</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 7: XR / XS -->
+        <!-- 7: 8 / X -->
         <article class="iphone-lineup-card">
-          <h3>XR / XS lineup</h3>
-          <p class="era-years">2018</p>
-          <ul>
-            <li>iPhone XR</li>
-            <li>iPhone XS</li>
-            <li>iPhone XS Max</li>
-          </ul>
+          <a href="phones/iphone-8-x.html" class="iphone-lineup-link">
+            <h3>8 / X generation</h3>
+            <p class="era-years">2017</p>
+            <ul>
+              <li>iPhone 8</li>
+              <li>iPhone 8 Plus</li>
+              <li>iPhone X</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 8: 11 series -->
+        <!-- 8: XR / XS -->
         <article class="iphone-lineup-card">
-          <h3>iPhone 11 series</h3>
-          <p class="era-years">2019</p>
-          <ul>
-            <li>iPhone 11</li>
-            <li>iPhone 11 Pro</li>
-            <li>iPhone 11 Pro Max</li>
-          </ul>
+          <a href="phones/iphone-xr-xs.html" class="iphone-lineup-link">
+            <h3>XR / XS lineup</h3>
+            <p class="era-years">2018</p>
+            <ul>
+              <li>iPhone XR</li>
+              <li>iPhone XS</li>
+              <li>iPhone XS Max</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 9: SE (2nd gen) + 12 -->
+        <!-- 9: 11 series -->
         <article class="iphone-lineup-card">
-          <h3>SE 2 &amp; 12 series</h3>
-          <p class="era-years">2020</p>
-          <ul>
-            <li>iPhone SE (2nd gen)</li>
-            <li>iPhone 12 mini</li>
-            <li>iPhone 12</li>
-            <li>iPhone 12 Pro</li>
-            <li>iPhone 12 Pro Max</li>
-          </ul>
+          <a href="phones/iphone-11-series.html" class="iphone-lineup-link">
+            <h3>iPhone 11 series</h3>
+            <p class="era-years">2019</p>
+            <ul>
+              <li>iPhone 11</li>
+              <li>iPhone 11 Pro</li>
+              <li>iPhone 11 Pro Max</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 10: 13 series -->
+        <!-- 10: SE2 + 12 -->
         <article class="iphone-lineup-card">
-          <h3>iPhone 13 series</h3>
-          <p class="era-years">2021</p>
-          <ul>
-            <li>iPhone 13 mini</li>
-            <li>iPhone 13</li>
-            <li>iPhone 13 Pro</li>
-            <li>iPhone 13 Pro Max</li>
-          </ul>
+          <a href="phones/iphone-se2-12.html" class="iphone-lineup-link">
+            <h3>SE 2 &amp; 12 series</h3>
+            <p class="era-years">2020</p>
+            <ul>
+              <li>iPhone SE (2nd gen)</li>
+              <li>iPhone 12 mini</li>
+              <li>iPhone 12</li>
+              <li>iPhone 12 Pro</li>
+              <li>iPhone 12 Pro Max</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 11: SE (3rd gen) + 14 -->
+        <!-- 11: 13 series -->
         <article class="iphone-lineup-card">
-          <h3>SE 3 &amp; 14 series</h3>
-          <p class="era-years">2022</p>
-          <ul>
-            <li>iPhone SE (3rd gen)</li>
-            <li>iPhone 14</li>
-            <li>iPhone 14 Plus</li>
-            <li>iPhone 14 Pro</li>
-            <li>iPhone 14 Pro Max</li>
-          </ul>
+          <a href="phones/iphone-13-series.html" class="iphone-lineup-link">
+            <h3>iPhone 13 series</h3>
+            <p class="era-years">2021</p>
+            <ul>
+              <li>iPhone 13 mini</li>
+              <li>iPhone 13</li>
+              <li>iPhone 13 Pro</li>
+              <li>iPhone 13 Pro Max</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 12: 15 series -->
+        <!-- 12: SE3 + 14 -->
         <article class="iphone-lineup-card">
-          <h3>iPhone 15 series</h3>
-          <p class="era-years">2023</p>
-          <ul>
-            <li>iPhone 15</li>
-            <li>iPhone 15 Plus</li>
-            <li>iPhone 15 Pro</li>
-            <li>iPhone 15 Pro Max</li>
-          </ul>
+          <a href="phones/iphone-se3-14.html" class="iphone-lineup-link">
+            <h3>SE 3 &amp; 14 series</h3>
+            <p class="era-years">2022</p>
+            <ul>
+              <li>iPhone SE (3rd gen)</li>
+              <li>iPhone 14</li>
+              <li>iPhone 14 Plus</li>
+              <li>iPhone 14 Pro</li>
+              <li>iPhone 14 Pro Max</li>
+            </ul>
+          </a>
         </article>
 
-        <!-- 13: future stuff -->
+        <!-- 13: 15 series -->
+        <article class="iphone-lineup-card">
+          <a href="phones/iphone-15-series.html" class="iphone-lineup-link">
+            <h3>iPhone 15 series</h3>
+            <p class="era-years">2023</p>
+            <ul>
+              <li>iPhone 15</li>
+              <li>iPhone 15 Plus</li>
+              <li>iPhone 15 Pro</li>
+              <li>iPhone 15 Pro Max</li>
+            </ul>
+          </a>
+        </article>
+
+        <!-- 14: future -->
         <article class="iphone-lineup-card lineup-future">
-          <h3>Future: 16 / 17 / Air</h3>
-          <p class="era-years">Wishlist / upcoming</p>
-          <ul>
-            <li>iPhone 16 lineup (future)</li>
-            <li>iPhone 17 lineup (future)</li>
-            <li>iPhone 17 Air (concept / dream)</li>
-          </ul>
+          <a href="phones/iphone-future.html" class="iphone-lineup-link">
+            <h3>Future: 16 / 17 / Air</h3>
+            <p class="era-years">Wishlist / upcoming</p>
+            <ul>
+              <li>iPhone 16 lineup (future)</li>
+              <li>iPhone 17 lineup (future)</li>
+              <li>iPhone 17 Air (concept / dream)</li>
+            </ul>
+          </a>
         </article>
 
       </div>
@@ -393,57 +422,10 @@
   </footer>
 
   <script>
-    // always start at top
-    window.addEventListener("load", () => {
-      window.scrollTo(0, 0);
-    });
-
-    // year in footer
     const yearEl = document.getElementById("year");
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
     }
-
-    // theme toggle
-    const root = document.documentElement;
-    const toggle = document.getElementById("themeToggle");
-    if (toggle) {
-      const icon = toggle.querySelector(".theme-toggle-icon");
-      function setTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
-      }
-      const saved = localStorage.getItem("theme");
-      if (saved) {
-        setTheme(saved);
-      } else {
-        const prefersDark =
-          window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
-        setTheme(prefersDark ? "dark" : "light");
-      }
-      toggle.addEventListener("click", () => {
-        const current =
-          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
-        setTheme(current === "dark" ? "light" : "dark");
-      });
-    }
-
-    // reveal on scroll
-    const revealEls = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
