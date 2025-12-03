@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repair Buddy AI | Mohammed</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Mohammed</div>
+    <nav>
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="phones.html">Phones</a>
+      <a href="ai.html">AI Helper</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
+  </header>
+
+  <main class="section ai-page">
+    <!-- Intro -->
+    <section class="section reveal">
+      <h1 class="section-title">Repair Buddy AI</h1>
+      <p class="section-subtitle">
+        A little “AI” that knows about the phones in my collection and basic repair ideas.
+        Try asking about screens, batteries, tools, or a specific phone (like “XR screen”).
+      </p>
+
+      <div class="phone-chip-row">
+        <button class="phone-chip ai-suggest" data-text="What phones have you worked on?">
+          What phones have you worked on?
+        </button>
+        <button class="phone-chip ai-suggest" data-text="Which phone is best to practise on?">
+          Best phone to practise on?
+        </button>
+        <button class="phone-chip ai-suggest" data-text="iPhone XR screen replacement tips">
+          XR screen tips
+        </button>
+        <button class="phone-chip ai-suggest" data-text="iPhone 7 Plus battery advice">
+          7 Plus battery advice
+        </button>
+      </div>
+    </section>
+
+    <!-- Chat box -->
+    <section class="section reveal">
+      <div class="ai-chat-card">
+        <div id="aiMessages" class="ai-messages">
+          <div class="ai-message ai-message-bot">
+            <div class="ai-message-body">
+              Hey, I’m <strong>Repair Buddy</strong> 🤖<br>
+              I only know about <em>Mohammed’s phones and basic phone repair ideas</em>,
+              but I’ll try my best.<br><br>
+              Ask me things like:
+              <ul>
+                <li><code>XR screen</code></li>
+                <li><code>7 Plus charging port</code></li>
+                <li><code>Which phones are you practising on?</code></li>
+                <li><code>What tools do I need to start?</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <form id="aiForm" class="ai-input-row">
+          <input
+            type="text"
+            id="aiInput"
+            class="ai-input"
+            placeholder="Ask Repair Buddy something..."
+            autocomplete="off"
+          />
+          <button type="submit" class="ai-send-btn">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    // Footer year
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Theme toggle (same logic as phones page)
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    // --- AI logic (fake but smart-ish) ---
+
+    const messagesEl = document.getElementById("aiMessages");
+    const formEl = document.getElementById("aiForm");
+    const inputEl = document.getElementById("aiInput");
+
+    function addMessage(text, sender) {
+      const wrapper = document.createElement("div");
+      wrapper.className =
+        "ai-message " + (sender === "bot" ? "ai-message-bot" : "ai-message-user");
+
+      const body = document.createElement("div");
+      body.className = "ai-message-body";
+      body.innerHTML = text;
+
+      wrapper.appendChild(body);
+      messagesEl.appendChild(wrapper);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    // Simple knowledge base
+    const qa = [
+      {
+        patterns: ["what phones have you worked on", "list phones", "which phones do you have"],
+        answer: `
+          Here are the phones in Mohammed’s collection that I know about:<br>
+          • Samsung Galaxy S10<br>
+          • iPhone 6s (teardown / practice)<br>
+          • iPhone 7 (bent practice phone)<br>
+          • iPhone 7 Plus (charging port + future battery)<br>
+          • iPhone XR (screen + camera glass)<br>
+          • iPhone 11<br>
+          • iPhone 11 Pro (personal phone)<br>
+          • iPhone 14 Pro Max (dad’s phone)<br>
+          • iPhone 17, 17 Pro and 17 Air (future goals)
+        `
+      },
+      {
+        patterns: ["best phone to practise", "which phone to practise", "practice phone", "practise phone"],
+        answer: `
+          For practising repairs, older and cheaper phones are best:<br>
+          • iPhone 6s – great for full teardowns and learning layouts.<br>
+          • iPhone 7 – your bent “Z‑fold” phone, perfect for low‑stress experiments.<br>
+          • iPhone 7 Plus – good for charging port and battery work.<br><br>
+          Don’t start on expensive phones like 11 Pro or 14 Pro Max. Train on the 6s/7/7 Plus first.
+        `
+      },
+      {
+        patterns: ["xr screen", "iphone xr screen", "xr display"],
+        answer: `
+          iPhone XR screen tips:<br>
+          • Heat around the edges first to soften the adhesive.<br>
+          • Open from the side with the pentalobe screws and lift like a book.<br>
+          • Be careful with the Face ID/earpiece flex at the top – don’t pull the screen too far.<br>
+          • Replace the water seal if you want to keep some resistance, but remember it won’t be factory‑sealed anymore.
+        `
+      },
+      {
+        patterns: ["7 plus battery", "7 plus battery advice", "iphone 7 plus battery"],
+        answer: `
+          iPhone 7 Plus battery advice:<br>
+          • Turn the phone off completely before starting.<br>
+          • Remove the screen carefully and support it so you don’t stretch the flex cables.<br>
+          • Use slow, steady pulling on the adhesive strips – if they snap, use a bit of heat and isopropyl from the side.<br>
+          • Keep track of screw sizes, especially around the battery connector shield (mixing screws can damage the board).
+        `
+      },
+      {
+        patterns: ["7 plus charging", "7 plus port", "charging port 7 plus"],
+        answer: `
+          Charging port tips for iPhone 7 Plus:<br>
+          • Take clear photos as you go so reassembly is easier.<br>
+          • There are a lot of screws and brackets – keep them in order on a magnetic mat or drawn layout.<br>
+          • Watch out for the Taptic Engine and speaker – they need to come out to reach the port assembly.<br>
+          • Always test the new port before fully sealing the phone.
+        `
+      },
+      {
+        patterns: ["tools", "what tools", "need to start", "starter kit"],
+        answer: `
+          Basic starter tools for phone repair:<br>
+          • Precision screwdriver set (pentalobe, Phillips, tri‑point, etc.)<br>
+          • Plastic spudgers and opening picks<br>
+          • Suction cup or screen lifting tool<br>
+          • Tweezers<br>
+          • Isopropyl alcohol (for cleaning and removing adhesive)<br>
+          • Heat source (heat pad or hair dryer on low)<br>
+          • Magnetic mat or screw organiser<br><br>
+          Always work on a clean, bright surface and keep track of every screw.
+        `
+      },
+      {
+        patterns: ["face id", "is face id safe", "will i break face id"],
+        answer: `
+          Face ID safety basics:<br>
+          • Never damage or swap the original Face ID sensor/flex – it’s paired to the logic board.<br>
+          • When opening phones like XR/11/11 Pro, support the top of the screen so it doesn’t pull on the Face ID flex.<br>
+          • Don’t poke tools near the sensor area at the top of the display.<br>
+          • If you’re unsure, practise on non‑Face‑ID phones (6s/7/7 Plus) first.
+        `
+      },
+      {
+        patterns: ["waterproof", "water resistance", "water‑resistance", "water seal"],
+        answer: `
+          About water resistance after a repair:<br>
+          • Once a phone is opened, it’s never truly factory‑waterproof again.<br>
+          • Replacing the adhesive seal helps, but it’s still only “splash resistant”.<br>
+          • Always tell people not to take repaired phones into pools, showers or heavy rain.<br>
+          • Focus on clean seals and no dust inside to keep it as protected as possible.
+        `
+      },
+      {
+        patterns: ["17 air", "iphone 17 air"],
+        answer: `
+          iPhone 17 Air (in this portfolio) is your ultra‑thin, lightweight future goal phone.<br>
+          For a phone like that, you’ll want excellent practise first on 6s/7/7 Plus/XR/11 era devices before opening it.
+        `
+      },
+      {
+        patterns: ["17 pro", "iphone 17 pro"],
+        answer: `
+          iPhone 17 Pro is a high‑end flagship target. Treat it like a “boss level” repair:<br>
+          • Only practise on broken/donor units at first.<br>
+          • Study tear‑downs to know cable locations before opening.<br>
+          • Make sure you’re comfortable with things like 11 Pro repairs before touching it.
+        `
+      },
+      {
+        patterns: ["scared", "nervous", "afraid", "worried"],
+        answer: `
+          It’s totally normal to be nervous about phone repairs, especially on expensive devices.<br>
+          Start with cheap, damaged phones where it’s okay if things go wrong. Move up slowly as your confidence grows.<br>
+          Every good repair tech has broken things while learning – the important part is learning from it.
+        `
+      }
+    ];
+
+    function getReply(question) {
+      const text = question.toLowerCase();
+
+      for (const item of qa) {
+        for (const pattern of item.patterns) {
+          if (text.includes(pattern)) {
+            return item.answer;
+          }
+        }
+      }
+
+      // Generic “I don’t know that” answer
+      return `
+        I’m just a small on‑page helper, not a full internet AI 😅<br>
+        I mainly know about:<br>
+        • Mohammed’s phones (6s, 7, 7 Plus, XR, 11, 11 Pro, 14 Pro Max, 17 series)<br>
+        • Basic screens, batteries, tools and Face ID safety.<br><br>
+        Try asking about a specific phone + part, like:<br>
+        <code>XR screen</code>, <code>7 Plus battery</code>, or <code>what tools do I need?</code>
+      `;
+    }
+
+    formEl.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const value = (inputEl.value || "").trim();
+      if (!value) return;
+
+      addMessage(value, "user");
+      const reply = getReply(value);
+      setTimeout(() => {
+        addMessage(reply, "bot");
+      }, 200);
+
+      inputEl.value = "";
+      inputEl.focus();
+    });
+
+    // Suggestion chips
+    const suggestButtons = document.querySelectorAll(".ai-suggest");
+    suggestButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = btn.getAttribute("data-text");
+        if (text) {
+          inputEl.value = text;
+          inputEl.focus();
+        }
+      });
+    });
+
+    // Reveal-on-scroll (same style as other pages)
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+  <style>
+    /* Extra light styling for the AI card so it matches your vibe */
+
+    .ai-page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ai-chat-card {
+      border-radius: 20px;
+      padding: 1.5rem;
+      background: rgba(10, 10, 30, 0.9);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 320px;
+    }
+
+    .ai-messages {
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .ai-message {
+      display: flex;
+    }
+
+    .ai-message-user {
+      justify-content: flex-end;
+    }
+
+    .ai-message-bot {
+      justify-content: flex-start;
+    }
+
+    .ai-message-body {
+      max-width: 80%;
+      padding: 0.85rem 1rem;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .ai-message-user .ai-message-body {
+      background: rgba(120, 120, 255, 0.9);
+      color: #fdfdfd;
+    }
+
+    .ai-message-bot .ai-message-body {
+      background: rgba(20, 20, 50, 0.95);
+      border: 1px solid rgba(140, 140, 255, 0.4);
+    }
+
+    .ai-input-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .ai-input {
+      flex: 1;
+      border-radius: 999px;
+      border: 1px solid rgba(130, 130, 200, 0.6);
+      padding: 0.7rem 1rem;
+      background: rgba(5, 5, 25, 0.8);
+      color: inherit;
+      outline: none;
+    }
+
+    .ai-input:focus {
+      border-color: rgba(170, 170, 255, 0.9);
+      box-shadow: 0 0 0 1px rgba(170, 170, 255, 0.9);
+    }
+
+    .ai-send-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.7rem 1.1rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .ai-send-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 700px) {
+      .ai-message-body {
+        max-width: 100%;
+      }
+    }
+  </style>
+</body>
+</html>
