@@ -1,0 +1,87 @@
+  <main>
+    <section class="section reveal iphone-lineup-page">
+      <h1 class="section-title">iPhone 11 series lineup</h1>
+      <p class="section-subtitle">
+        A really important generation for me – I own both an iPhone 11 and an 11 Pro.
+      </p>
+
+      <section class="phone-section-card">
+        <h2>📱 Models in this lineup</h2>
+        <ul>
+          <li><strong>iPhone 11</strong> – repair training device.</li>
+          <li><strong>iPhone 11 Pro</strong> – my personal daily phone.</li>
+          <li><strong>iPhone 11 Pro Max</strong></li>
+        </ul>
+      </section>
+
+      <section class="phone-section-card">
+        <h2>🔧 My connection to this lineup</h2>
+        <ul>
+          <li>iPhone 11 helps me practice modern repair layouts safely.</li>
+          <li>iPhone 11 Pro is a future goal – fix it only when I’m fully ready.</li>
+          <li>This lineup is a big step between older LCD phones and modern flagships.</li>
+        </ul>
+      </section>
+
+      <p class="back-link">
+        <a href="../phones.html">← Back to all phones & lineups</a>
+      </p>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    © <span id="year"></span> Mohammed
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
