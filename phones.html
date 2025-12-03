@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Phones | Mohammed</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  </script>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -17,19 +22,23 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle-label">Theme</span>
+      <span class="theme-toggle-icon">🌞</span>
+    </button>
   </header>
 
   <main>
     <!-- PAGE INTRO -->
-    <section class="section">
+    <section class="section reveal">
       <h1 class="section-title">Phones I’ve worked with</h1>
       <p class="section-subtitle">
-        Every card is one real phone I own or use for practice. Click a card to see repair notes.
+        Every card is one real phone I own, practise on, or want to repair. Click a card to see more.
       </p>
     </section>
 
     <!-- PHONES GRID (ONE CARD = ONE PHONE) -->
-    <section class="section" id="phones-list">
+    <section class="section reveal" id="phones-list">
       <h2 class="section-title">My phone collection</h2>
 
       <div class="phones-grid">
@@ -208,7 +217,7 @@
           </a>
         </article>
 
-                <!-- iPhone 17 -->
+        <!-- iPhone 17 -->
         <article class="phone-card">
           <a href="phones/iphone-17.html">
             <div class="phone-header">
@@ -274,7 +283,6 @@
           </a>
         </article>
 
-
       </div>
     </section>
   </main>
@@ -284,11 +292,52 @@
   </footer>
 
   <script>
+    // year in footer
     const yearEl = document.getElementById("year");
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
     }
+
+    // theme toggle
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-toggle-icon");
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (icon) icon.textContent = theme === "dark" ? "🎮" : "🌞";
+      }
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        setTheme(saved);
+      } else {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", () => {
+        const current =
+          root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    // reveal-on-scroll
+    const revealEls = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
-
